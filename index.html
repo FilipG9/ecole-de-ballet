@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artemisia Studio Danza | Carpi</title>
+  <meta name="description" content="Artemisia Studio Danza: corsi di propedeutica, danza classica, modern, danza per adulti e dance workout." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --plum:#4f0e82;
+      --violet:#865ca1;
+      --lilac:#d4b7ed;
+      --rose:#f6c3f7;
+      --mauve:#a486a1;
+      --ink:#433742;
+      --paper:#fffafd;
+      --white:#ffffff;
+      --line:rgba(67,55,66,.14);
+      --shadow:0 28px 80px rgba(67,55,66,.12);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Inter", Arial, sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    h1,h2,h3,p{margin:0}
+    .container{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+    .topbar{
+      background:var(--ink);
+      color:#fff;
+      font-size:11px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      text-align:center;
+      padding:9px 18px;
+    }
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(255,250,253,.86);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:13px;
+      min-width:0;
+    }
+    .brand img{
+      width:52px;
+      height:52px;
+      object-fit:contain;
+      border-radius:50%;
+      background:#fff;
+    }
+    .brand strong{
+      display:block;
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:28px;
+      line-height:.9;
+      color:var(--plum);
+      font-weight:500;
+      white-space:nowrap;
+    }
+    .brand span{
+      display:block;
+      margin-top:6px;
+      font-size:10px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--mauve);
+      font-weight:700;
+    }
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:11px;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    .menu a{opacity:.72}
+    .menu a:hover{opacity:1;color:var(--plum)}
+    .nav-cta{
+      border:1px solid rgba(79,14,130,.24);
+      color:var(--plum);
+      padding:12px 16px;
+      border-radius:999px;
+      font-size:11px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .hero{
+      min-height:calc(100vh - 104px);
+      max-height:820px;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
+      overflow:hidden;
+      color:#fff;
+      background:#1f1720;
+    }
+    .hero img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      filter:saturate(.95) contrast(1.03);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg,rgba(31,23,32,.84),rgba(31,23,32,.34) 52%,rgba(31,23,32,.10)),
+        linear-gradient(0deg,rgba(31,23,32,.78),rgba(31,23,32,0) 46%);
+      z-index:1;
+    }
+    .hero-content{
+      position:relative;
+      z-index:2;
+      width:100%;
+      padding:120px 22px 72px;
+    }
+    .hero-copy{
+      max-width:var(--max);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,650px) minmax(230px,340px);
+      gap:50px;
+      align-items:end;
+    }
+    .kicker{
+      font-size:12px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      font-weight:800;
+      color:var(--rose);
+      margin-bottom:18px;
+    }
+    h1{
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:clamp(54px, 8vw, 108px);
+      line-height:.87;
+      font-weight:500;
+      max-width:720px;
+    }
+    .hero p{
+      margin-top:26px;
+      max-width:570px;
+      font-size:17px;
+      line-height:1.75;
+      color:rgba(255,255,255,.86);
+    }
+    .hero-panel{
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.12);
+      backdrop-filter:blur(16px);
+      padding:24px;
+      border-radius:8px;
+    }
+    .hero-panel b{
+      display:block;
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:32px;
+      font-weight:500;
+      margin-bottom:10px;
+    }
+    .hero-panel span{
+      display:block;
+      color:rgba(255,255,255,.82);
+      line-height:1.65;
+      font-size:14px;
+    }
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:0 22px;
+      border-radius:999px;
+      border:1px solid transparent;
+      background:var(--plum);
+      color:#fff;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:800;
+      transition:transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .btn:hover{transform:translateY(-2px);background:#37105b}
+    .btn.light{
+      background:rgba(255,255,255,.12);
+      border-color:rgba(255,255,255,.36);
+    }
+    .btn.light:hover{background:rgba(255,255,255,.24)}
+
+    section{padding:96px 0}
+    .section-head{
+      max-width:760px;
+      margin:0 auto 42px;
+      text-align:center;
+    }
+    .eyebrow{
+      display:block;
+      color:var(--violet);
+      font-size:12px;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      font-weight:800;
+      margin-bottom:14px;
+    }
+    h2{
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:clamp(38px,5vw,64px);
+      line-height:.96;
+      font-weight:500;
+      color:var(--plum);
+    }
+    .lead{
+      margin-top:20px;
+      font-size:16px;
+      line-height:1.85;
+      color:rgba(67,55,66,.78);
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:54px;
+      align-items:center;
+    }
+    .logo-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:8px;
+      padding:38px;
+      box-shadow:var(--shadow);
+    }
+    .logo-card img{
+      width:min(360px,100%);
+      margin:0 auto;
+    }
+    .intro-text{
+      display:grid;
+      gap:22px;
+    }
+    .intro-text p{
+      font-size:17px;
+      line-height:1.85;
+      color:rgba(67,55,66,.8);
+    }
+    .values{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+    .value{
+      min-height:118px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      padding:18px;
+      background:#fff;
+    }
+    .value b{
+      display:block;
+      color:var(--plum);
+      font-size:13px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:9px;
+    }
+    .value span{
+      color:rgba(67,55,66,.72);
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .courses{
+      background:#fff;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .course-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
+      align-items:stretch;
+    }
+    .course-card{
+      height:520px;
+      position:relative;
+      overflow:hidden;
+      border-radius:8px;
+      background:#251d26;
+      display:flex;
+      align-items:flex-end;
+      isolation:isolate;
+      box-shadow:0 18px 52px rgba(67,55,66,.12);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+    .course-card.wide{grid-column:auto}
+    .course-card img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .65s ease, filter .65s ease;
+      z-index:-2;
+    }
+    .course-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(0deg,rgba(37,29,38,.92),rgba(37,29,38,.36) 58%,rgba(37,29,38,.08));
+      z-index:-1;
+    }
+    .course-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 30px 80px rgba(67,55,66,.20);
+    }
+    .course-card:hover img{
+      transform:scale(1.055);
+      filter:saturate(1.05);
+    }
+    .course-copy{
+      padding:22px;
+      color:#fff;
+    }
+    .course-copy h3{
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:29px;
+      line-height:1;
+      font-weight:500;
+      margin-bottom:14px;
+    }
+    .course-copy p{
+      color:rgba(255,255,255,.83);
+      font-size:13px;
+      line-height:1.62;
+    }
+    .course-copy ul{
+      list-style:none;
+      padding:0;
+      margin:16px 0 0;
+      display:grid;
+      gap:8px;
+    }
+    .course-copy li{
+      font-size:12px;
+      line-height:1.45;
+      color:rgba(255,255,255,.9);
+    }
+    .course-copy li::before{
+      content:"";
+      display:inline-block;
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--rose);
+      margin-right:8px;
+      transform:translateY(-1px);
+    }
+
+    .method{
+      padding:0;
+      background:var(--ink);
+      color:#fff;
+      overflow:hidden;
+    }
+    .method-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      min-height:540px;
+    }
+    .method-image{
+      position:relative;
+      min-height:420px;
+    }
+    .method-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(.9) contrast(1.04);
+    }
+    .method-image::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(67,55,66,0),rgba(67,55,66,.2));
+    }
+    .method-copy{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:74px max(22px,calc((100vw - var(--max))/2)) 74px 64px;
+      min-width:0;
+    }
+    .method h2{
+      color:#fff;
+      font-size:clamp(38px,4.6vw,62px);
+      overflow-wrap:break-word;
+    }
+    .method .eyebrow{color:var(--rose)}
+    .method .lead{color:rgba(255,255,255,.76)}
+    .method-points{
+      display:grid;
+      gap:16px;
+      margin-top:34px;
+      max-width:640px;
+    }
+    .method-point{
+      position:relative;
+      min-height:0;
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:8px;
+      padding:18px 20px 18px 72px;
+      color:rgba(255,255,255,.88);
+      background:linear-gradient(115deg,rgba(255,255,255,.10),rgba(255,255,255,.035));
+      overflow:hidden;
+      cursor:default;
+      box-shadow:0 18px 52px rgba(0,0,0,.12);
+      transition:background .25s ease, border-color .25s ease, transform .35s cubic-bezier(.2,.78,.2,1), box-shadow .35s ease;
+    }
+    .method-point:nth-child(even){
+      margin-left:42px;
+    }
+    .method-point::before{
+      content:"";
+      position:absolute;
+      left:24px;
+      top:22px;
+      width:27px;
+      height:27px;
+      border:1px solid rgba(246,195,247,.85);
+      border-radius:50%;
+      box-shadow:0 0 0 8px rgba(246,195,247,.08);
+      transition:transform .35s ease, background .35s ease, box-shadow .35s ease;
+    }
+    .method-point::after{
+      content:"";
+      position:absolute;
+      left:37px;
+      top:50px;
+      bottom:-18px;
+      width:1px;
+      background:linear-gradient(rgba(246,195,247,.52),rgba(246,195,247,0));
+      opacity:.58;
+    }
+    .method-point b{
+      display:block;
+      color:#fff;
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:26px;
+      line-height:1;
+      font-weight:500;
+      letter-spacing:0;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    .method-point span{
+      display:block;
+      max-height:none;
+      opacity:1;
+      transform:none;
+      color:rgba(255,255,255,.76);
+      font-size:14px;
+      line-height:1.7;
+    }
+    .method-point:hover,
+    .method-point:focus-visible{
+      transform:translateX(10px) translateY(-5px);
+      border-color:rgba(246,195,247,.58);
+      background:linear-gradient(115deg,rgba(246,195,247,.18),rgba(255,255,255,.06));
+      box-shadow:0 28px 70px rgba(0,0,0,.24);
+      outline:0;
+    }
+    .method-point:hover::before,
+    .method-point:focus-visible::before{
+      transform:scale(1.18) rotate(18deg);
+      background:rgba(246,195,247,.2);
+      box-shadow:0 0 0 12px rgba(246,195,247,.12);
+    }
+
+    .schedule-section{
+      background:
+        radial-gradient(circle at 8% 14%,rgba(246,195,247,.32),transparent 28%),
+        radial-gradient(circle at 92% 86%,rgba(212,183,237,.34),transparent 30%),
+        var(--paper);
+    }
+    .schedule-grid{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:14px;
+      align-items:stretch;
+    }
+    .schedule-card{
+      min-height:318px;
+      display:flex;
+      flex-direction:column;
+      border:1px solid rgba(79,14,130,.14);
+      border-radius:8px;
+      padding:22px;
+      background:rgba(255,255,255,.82);
+      box-shadow:0 20px 58px rgba(67,55,66,.09);
+      transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+    }
+    .schedule-card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(79,14,130,.3);
+      box-shadow:0 30px 76px rgba(67,55,66,.15);
+    }
+    .schedule-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      min-height:74px;
+      padding-bottom:20px;
+      border-bottom:1px solid var(--line);
+    }
+    .schedule-card h3{
+      color:var(--plum);
+      font-family:"Cormorant Garamond",Georgia,serif;
+      font-size:28px;
+      line-height:.95;
+      font-weight:500;
+    }
+    .schedule-index{
+      flex:0 0 auto;
+      width:34px;
+      height:34px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:var(--plum);
+      color:#fff;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+    .schedule-slots{
+      display:grid;
+      gap:12px;
+      margin-top:20px;
+    }
+    .schedule-slot{
+      padding:13px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .schedule-slot:last-child{border-bottom:0}
+    .schedule-slot span{
+      display:block;
+      margin-bottom:6px;
+      color:var(--violet);
+      font-size:10px;
+      line-height:1;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+    .schedule-slot time{
+      color:var(--ink);
+      font-size:15px;
+      font-weight:700;
+    }
+    .schedule-note{
+      max-width:760px;
+      margin:28px auto 0;
+      color:rgba(67,55,66,.62);
+      font-size:12px;
+      line-height:1.65;
+      text-align:center;
+    }
+
+    .team{
+      background:#fff;
+      border-top:1px solid var(--line);
+    }
+    .team-story{
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+      margin-bottom:28px;
+    }
+    .team-group-photo{
+      aspect-ratio:4/3;
+      margin:0;
+      overflow:hidden;
+      border-radius:8px;
+      background:#d9d9d7;
+    }
+    .team-group-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 42%;
+    }
+    .team-story-copy{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:34px;
+      border-radius:8px;
+      background:var(--ink);
+      color:#fff;
+    }
+    .team-story-copy .eyebrow{color:var(--rose)}
+    .team-story-copy h3{
+      font-family:"Cormorant Garamond",Georgia,serif;
+      font-size:38px;
+      line-height:1;
+      font-weight:500;
+    }
+    .team-story-copy p{
+      margin-top:18px;
+      color:rgba(255,255,255,.74);
+      font-size:14px;
+      line-height:1.75;
+    }
+    .team-grid{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:14px;
+    }
+    .person{
+      border:1px solid var(--line);
+      border-radius:8px;
+      overflow:hidden;
+      background:var(--paper);
+    }
+    .person-photo{
+      height:300px;
+      background:#efe7f0;
+      overflow:hidden;
+    }
+    .person-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center top;
+      filter:grayscale(1) contrast(1.02);
+      transition:filter .3s ease, transform .5s ease;
+    }
+    .person:hover img{
+      filter:grayscale(.2) contrast(1.02);
+      transform:scale(1.035);
+    }
+    .person-info{
+      padding:18px;
+      min-height:112px;
+    }
+    .person h3{
+      color:var(--plum);
+      font-size:18px;
+      margin-bottom:7px;
+    }
+    .person p{
+      color:rgba(67,55,66,.72);
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+
+    .cta{
+      padding:0;
+      color:#fff;
+      background:
+        linear-gradient(90deg,rgba(79,14,130,.92),rgba(67,55,66,.76)),
+        url("assets/course-classica.png") center/cover no-repeat;
+    }
+    .cta-inner{
+      min-height:390px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:42px;
+      align-items:center;
+      padding:72px 22px;
+    }
+    .cta h2{color:#fff;max-width:670px}
+    .cta p{
+      max-width:620px;
+      margin-top:18px;
+      color:rgba(255,255,255,.8);
+      font-size:16px;
+      line-height:1.75;
+    }
+    .cta .btn{
+      background:#fff;
+      color:var(--plum);
+    }
+    .cta .btn:hover{background:var(--rose)}
+
+    .newsletter{
+      padding:82px 0;
+      background:
+        linear-gradient(135deg,rgba(246,195,247,.42),rgba(212,183,237,.34)),
+        var(--paper);
+      border-bottom:1px solid var(--line);
+      overflow:hidden;
+    }
+    .newsletter-inner{
+      display:grid;
+      grid-template-columns:1fr minmax(320px,520px);
+      gap:42px;
+      align-items:center;
+    }
+    .newsletter h2{
+      max-width:620px;
+    }
+    .newsletter p{
+      margin-top:18px;
+      max-width:590px;
+      color:rgba(67,55,66,.76);
+      font-size:16px;
+      line-height:1.75;
+    }
+    .newsletter-form{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:10px;
+      align-items:center;
+      padding:8px;
+      border:1px solid rgba(79,14,130,.16);
+      border-radius:8px;
+      background:rgba(255,255,255,.78);
+      box-shadow:0 24px 70px rgba(67,55,66,.12);
+    }
+    .newsletter-form input{
+      border:0;
+      background:transparent;
+      min-height:50px;
+    }
+    .newsletter-form input:focus{
+      box-shadow:none;
+    }
+    .newsletter-form .btn{
+      min-height:50px;
+      border:0;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .newsletter-note{
+      display:block;
+      margin-top:12px;
+      color:rgba(67,55,66,.58);
+      font-size:12px;
+      line-height:1.55;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:38px;
+      align-items:start;
+    }
+    .contact-card{
+      border-radius:8px;
+      border:1px solid var(--line);
+      background:#fff;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+    .contact-card h3{
+      color:var(--plum);
+      font-size:13px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+    .contact-card p{
+      color:rgba(67,55,66,.78);
+      line-height:1.8;
+      font-size:15px;
+    }
+    .contact-list{
+      display:grid;
+      gap:13px;
+      margin-top:24px;
+    }
+    .contact-item{
+      border-top:1px solid var(--line);
+      padding-top:13px;
+    }
+    .contact-item b{
+      display:block;
+      color:var(--plum);
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:5px;
+    }
+    .contact-item span{
+      display:block;
+      color:rgba(67,55,66,.76);
+      font-size:15px;
+      line-height:1.65;
+    }
+    .form{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    input,textarea{
+      width:100%;
+      border:1px solid var(--line);
+      border-radius:8px;
+      min-height:48px;
+      padding:0 15px;
+      background:#fff;
+      color:var(--ink);
+      font:inherit;
+      font-size:14px;
+      outline:none;
+    }
+    textarea{
+      grid-column:1/-1;
+      min-height:134px;
+      padding-top:14px;
+      resize:vertical;
+    }
+    input:focus,textarea:focus{border-color:var(--violet);box-shadow:0 0 0 3px rgba(134,92,161,.15)}
+    .form .btn{
+      border:0;
+      cursor:pointer;
+      width:max-content;
+      min-width:190px;
+    }
+
+    footer{
+      background:#1f1720;
+      color:#fff;
+      padding:42px 0;
+    }
+    .footer-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 22px;
+      display:flex;
+      justify-content:space-between;
+      gap:28px;
+      align-items:center;
+    }
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .footer-brand img{width:58px;height:58px;object-fit:contain}
+    .footer-brand b{
+      display:block;
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:28px;
+      font-weight:500;
+    }
+    .footer-brand span,
+    footer p{
+      color:rgba(255,255,255,.62);
+      font-size:13px;
+      line-height:1.65;
+    }
+    .footer-links{
+      display:flex;
+      gap:18px;
+      color:rgba(255,255,255,.72);
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(34px);
+      transition:opacity .8s ease, transform .8s cubic-bezier(.2,.78,.2,1);
+      transition-delay:var(--delay,0ms);
+    }
+    .reveal.is-visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+    .hero img{
+      animation:breathImage 18s ease-in-out infinite alternate;
+    }
+    .hero-panel{
+      animation:floatPanel 7s ease-in-out infinite;
+    }
+    .course-copy h3{
+      text-shadow:0 10px 34px rgba(31,23,32,.32);
+    }
+    @keyframes breathImage{
+      from{transform:scale(1)}
+      to{transform:scale(1.045)}
+    }
+    @keyframes floatPanel{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+
+    @media(max-width:1080px){
+      .course-grid{grid-template-columns:repeat(2,1fr)}
+      .course-card.wide{grid-column:span 1}
+      .schedule-grid{grid-template-columns:repeat(2,1fr)}
+      .team-grid{grid-template-columns:repeat(3,1fr)}
+      .method-grid{grid-template-columns:1fr}
+      .method-copy{padding:64px 22px}
+      .method-points{max-width:none}
+      .method-point:nth-child(even){margin-left:0}
+      .menu{display:none}
+    }
+
+    @media(max-width:820px){
+      .topbar{font-size:10px;line-height:1.5}
+      .nav-inner{min-height:70px}
+      .brand strong{font-size:24px}
+      .brand span{font-size:9px}
+      .nav-cta{display:none}
+      .hero{min-height:720px}
+      .hero-copy{grid-template-columns:1fr;gap:28px}
+      .hero-content{padding-bottom:48px}
+      .intro-grid,
+      .method-grid,
+      .contact-grid,
+      .newsletter-inner,
+      .cta-inner{grid-template-columns:1fr}
+      .method-copy{padding:64px 22px}
+      .values{grid-template-columns:1fr}
+      .method-points{max-width:none}
+      .method-point:nth-child(even){margin-left:0}
+      .team-story{grid-template-columns:1fr}
+      .team-grid{grid-template-columns:repeat(2,1fr)}
+      .cta-inner{gap:22px}
+      .footer-inner{align-items:flex-start;flex-direction:column}
+      .footer-links{flex-wrap:wrap}
+    }
+
+    @media(max-width:560px){
+      section{padding:72px 0}
+      .container{padding:0 18px}
+      .hero-content{padding-left:18px;padding-right:18px}
+      .hero p{font-size:15px}
+      .hero-panel{padding:20px}
+      .actions{flex-direction:column}
+      .btn{width:100%}
+      .course-grid,
+      .schedule-grid,
+      .team-grid{grid-template-columns:1fr}
+      .course-card{height:500px}
+      .person-photo{height:390px}
+      .form{grid-template-columns:1fr}
+      .form .btn{width:100%}
+      .newsletter-form{grid-template-columns:1fr}
+      .newsletter-form .btn{width:100%}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      *,
+      *::before,
+      *::after{
+        animation:none!important;
+        scroll-behavior:auto!important;
+        transition:none!important;
+      }
+      .reveal{
+        opacity:1;
+        transform:none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Studio danza | Propedeutica, classica, modern, adulti e dance workout</div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Artemisia Studio Danza">
+        <img src="assets/artemisia-logo.jpg" alt="">
+        <span>
+          <strong>Artemisia</strong>
+          <span>Studio Danza</span>
+        </span>
+      </a>
+      <nav class="menu" aria-label="Navigazione principale">
+        <a href="#studio">Studio</a>
+        <a href="#corsi">Corsi</a>
+        <a href="#metodo">Metodo</a>
+        <a href="#orari">Orari</a>
+        <a href="#socie">Socie</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <a class="nav-cta" href="#contatti">Lezione prova</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Artemisia Studio Danza">
+      <img src="assets/artemisia-hero.png" alt="Danzatrice in abito bianco in una sala luminosa">
+      <div class="hero-content">
+        <div class="hero-copy">
+          <div>
+            <div class="kicker">Artemisia Studio Danza</div>
+            <h1>Il movimento prende forma.</h1>
+            <p>Un ambiente curato, creativo e sicuro dove bambini, ragazzi e adulti incontrano la danza attraverso tecnica, ascolto, ritmo ed espressione personale.</p>
+            <div class="actions">
+              <a class="btn" href="#corsi">Scopri i corsi</a>
+              <a class="btn light" href="#contatti">Prenota una prova</a>
+            </div>
+          </div>
+          <aside class="hero-panel" aria-label="Sintesi dello studio">
+            <b>Metodo, energia, presenza.</b>
+            <span>La sala diventa uno spazio di crescita: postura, musicalit&agrave;, disciplina e libert&agrave; espressiva lavorano insieme.</span>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio">
+      <div class="container intro-grid">
+        <div class="logo-card">
+          <img src="assets/artemisia-logo.jpg" alt="Logo Artemisia Studio Danza">
+        </div>
+        <div class="intro-text">
+          <span class="eyebrow">Lo studio</span>
+          <h2>Tradizione e innovazione, nel cuore di Carpi.</h2>
+          <p>Artemisia Studio Danza nasce come punto di riferimento per chi desidera scoprire, vivere e approfondire la magia del movimento. Il rigore e l'eleganza del balletto classico incontrano l'energia e la libert&agrave; espressiva della danza moderna.</p>
+          <p>Ogni allievo &egrave; accompagnato in un percorso di crescita tecnica, artistica e personale, dai primi passi dei pi&ugrave; piccoli fino alle lezioni per adulti. Per coltivare una passione non esistono limiti di tempo: non &egrave; mai troppo tardi per iniziare a ballare.</p>
+          <div class="values">
+            <div class="value"><b>Tecnica</b><span>Studio del corpo, allineamento, controllo e progressione.</span></div>
+            <div class="value"><b>Ritmo</b><span>Educazione musicale, dinamiche e relazione tra gesto e suono.</span></div>
+            <div class="value"><b>Espressione</b><span>Movimento come linguaggio personale, emotivo e scenico.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="corsi" class="courses">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Corsi</span>
+          <h2>Percorsi per et&agrave;, ritmo e obiettivi diversi.</h2>
+          <p class="lead">Dalla propedeutica alla formazione tecnica, dai corsi adulti al dance workout: ogni proposta nasce per rispettare il corpo e valorizzare il movimento.</p>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card wide">
+            <img src="assets/course-propedeutica.png" alt="Danzatrice vista dall'alto in sala luminosa">
+            <div class="course-copy">
+              <h3>Propedeutica</h3>
+              <p>Il primo incontro con la danza attraverso gioco, scoperta e crescita in un ambiente stimolante e sicuro.</p>
+              <ul>
+                <li>Coordinazione, equilibrio e postura</li>
+                <li>Ritmo, ascolto e musicalit&agrave;</li>
+                <li>Spazio, relazione e condivisione</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="course-card wide">
+            <img src="assets/course-classica.png" alt="Danzatrice classica in abito bianco">
+            <div class="course-copy">
+              <h3>Danza Classica</h3>
+              <p>La base tecnica imprescindibile: rigore, eleganza e profonda espressione artistica.</p>
+              <ul>
+                <li>Lavoro alla sbarra e al centro</li>
+                <li>Allineamento, flessibilit&agrave; e controllo</li>
+                <li>Disciplina, concentrazione e musicalit&agrave;</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <img src="assets/course-modern.png" alt="Danzatrice modern in movimento">
+            <div class="course-copy">
+              <h3>Modern</h3>
+              <p>Energia, dinamismo e libert&agrave; espressiva, con lavoro sul respiro, sul peso e sullo spazio.</p>
+              <ul>
+                <li>Floorwork e radicamento</li>
+                <li>Dinamiche e cambi di direzione</li>
+                <li>Linguaggio corporeo personale</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <img src="assets/course-adulti.png" alt="Danzatrice adulta in movimento fluido">
+            <div class="course-copy">
+              <h3>Danza Adulti</h3>
+              <p>Un corso accogliente per iniziare o riprendere, con studio graduale delle basi classiche e moderne.</p>
+              <ul>
+                <li>Benessere, postura e tono</li>
+                <li>Movimento fluido e dinamico</li>
+                <li>Tempo per s&eacute;, senza giudizio</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <img src="assets/course-workout.png" alt="Danzatrice in posa dinamica">
+            <div class="course-copy">
+              <h3>Dance Workout</h3>
+              <p>Danza e fitness in un percorso inclusivo, accessibile e modulabile per intensit&agrave;.</p>
+              <ul>
+                <li>Progressione dolce e basso impatto</li>
+                <li>Cardio e tonificazione graduali</li>
+                <li>Energia, ritmo e leggerezza</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo" class="method">
+      <div class="method-grid">
+        <div class="method-image">
+          <img src="assets/course-adulti.png" alt="Danzatrice in movimento in sala prove">
+        </div>
+        <div class="method-copy">
+          <span class="eyebrow">Metodo</span>
+          <h2>Il gesto non &egrave; solo un passo: &egrave; ascolto.</h2>
+          <p class="lead">Ogni corso lavora su corpo, ritmo e spazio. La tecnica serve a costruire sicurezza; la creativit&agrave; permette a ogni allievo di trovare presenza, intenzione e qualit&agrave; nel movimento.</p>
+          <div class="method-points" aria-label="Punti del metodo">
+            <div class="method-point" tabindex="0">
+              <b>Postura</b>
+              <span>Il corpo impara ad allinearsi, sostenersi e muoversi con rispetto della propria fisiologia.</span>
+            </div>
+            <div class="method-point" tabindex="0">
+              <b>Musicalit&agrave;</b>
+              <span>L'ascolto guida il gesto: ritmo, dinamiche e respiro trasformano le note in movimento.</span>
+            </div>
+            <div class="method-point" tabindex="0">
+              <b>Spazio</b>
+              <span>La sala diventa relazione: orientamento, distanze, condivisione e presenza nel gruppo.</span>
+            </div>
+            <div class="method-point" tabindex="0">
+              <b>Espressione</b>
+              <span>La tecnica sostiene un linguaggio personale, emotivo, chiaro e mai lasciato al caso.</span>
+            </div>
+            <div class="method-point" tabindex="0">
+              <b>Progressione</b>
+              <span>Ogni percorso cresce con intensit&agrave; graduale, varianti accessibili e obiettivi concreti.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="orari" class="schedule-section" aria-labelledby="orari-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Orari settimanali</span>
+          <h2 id="orari-title">Trova il momento giusto per danzare.</h2>
+          <p class="lead">Ogni stile ha la sua scheda: giorno e fascia oraria sono subito leggibili, anche da smartphone.</p>
+        </div>
+        <div class="schedule-grid">
+          <article class="schedule-card">
+            <div class="schedule-top"><h3>Propedeutica</h3><span class="schedule-index">01</span></div>
+            <div class="schedule-slots">
+              <div class="schedule-slot"><span>Luned&igrave;</span><time datetime="16:30">16:30 &ndash; 17:30</time></div>
+              <div class="schedule-slot"><span>Mercoled&igrave;</span><time datetime="16:30">16:30 &ndash; 17:30</time></div>
+            </div>
+          </article>
+          <article class="schedule-card">
+            <div class="schedule-top"><h3>Danza Classica</h3><span class="schedule-index">02</span></div>
+            <div class="schedule-slots">
+              <div class="schedule-slot"><span>Marted&igrave;</span><time datetime="17:00">17:00 &ndash; 18:30</time></div>
+              <div class="schedule-slot"><span>Gioved&igrave;</span><time datetime="17:00">17:00 &ndash; 18:30</time></div>
+            </div>
+          </article>
+          <article class="schedule-card">
+            <div class="schedule-top"><h3>Modern</h3><span class="schedule-index">03</span></div>
+            <div class="schedule-slots">
+              <div class="schedule-slot"><span>Luned&igrave;</span><time datetime="18:00">18:00 &ndash; 19:15</time></div>
+              <div class="schedule-slot"><span>Mercoled&igrave;</span><time datetime="18:00">18:00 &ndash; 19:15</time></div>
+            </div>
+          </article>
+          <article class="schedule-card">
+            <div class="schedule-top"><h3>Danza Adulti</h3><span class="schedule-index">04</span></div>
+            <div class="schedule-slots">
+              <div class="schedule-slot"><span>Marted&igrave;</span><time datetime="20:00">20:00 &ndash; 21:15</time></div>
+              <div class="schedule-slot"><span>Gioved&igrave;</span><time datetime="20:00">20:00 &ndash; 21:15</time></div>
+            </div>
+          </article>
+          <article class="schedule-card">
+            <div class="schedule-top"><h3>Dance Workout</h3><span class="schedule-index">05</span></div>
+            <div class="schedule-slots">
+              <div class="schedule-slot"><span>Mercoled&igrave;</span><time datetime="19:30">19:30 &ndash; 20:30</time></div>
+              <div class="schedule-slot"><span>Venerd&igrave;</span><time datetime="19:30">19:30 &ndash; 20:30</time></div>
+            </div>
+          </article>
+        </div>
+        <p class="schedule-note"><strong>Programmazione dimostrativa:</strong> giorni e orari sono da confermare con la segreteria prima della pubblicazione.</p>
+      </div>
+    </section>
+
+    <section id="socie" class="team">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Socie</span>
+          <h2>Le persone dietro lo studio.</h2>
+          <p class="lead">Cinque socie fondatrici e docenti, unite da oltre vent'anni di carriera artistica e di palcoscenico, guidano una formazione solida, attenta e accogliente.</p>
+        </div>
+        <div class="team-story">
+          <figure class="team-group-photo">
+            <img src="assets/team-tutte.webp" alt="Le cinque socie fondatrici di Artemisia Studio Danza insieme">
+          </figure>
+          <div class="team-story-copy">
+            <span class="eyebrow">Un progetto condiviso</span>
+            <h3>Cinque percorsi, una sola visione.</h3>
+            <p>L'esperienza diretta sul palcoscenico sostiene una didattica capace di unire precisione accademica, sensibilit&agrave; artistica e linguaggi contemporanei.</p>
+          </div>
+        </div>
+        <div class="team-grid">
+          <article class="person">
+            <div class="person-photo"><img src="assets/team-francesca.webp" alt="Francesca"></div>
+            <div class="person-info">
+              <h3>Francesca</h3>
+              <p>Presidente</p>
+            </div>
+          </article>
+          <article class="person">
+            <div class="person-photo"><img src="assets/team-chiara.webp" alt="Chiara"></div>
+            <div class="person-info">
+              <h3>Chiara</h3>
+              <p>Vicepresidente</p>
+            </div>
+          </article>
+          <article class="person">
+            <div class="person-photo"><img src="assets/team-ilenia.webp" alt="Ilenia"></div>
+            <div class="person-info">
+              <h3>Ilenia</h3>
+              <p>Amministrazione</p>
+            </div>
+          </article>
+          <article class="person">
+            <div class="person-photo"><img src="assets/team-sara.webp" alt="Sara"></div>
+            <div class="person-info">
+              <h3>Sara</h3>
+              <p>Docente</p>
+            </div>
+          </article>
+          <article class="person">
+            <div class="person-photo"><img src="assets/team-valentina.webp" alt="Valentina"></div>
+            <div class="person-info">
+              <h3>Valentina</h3>
+              <p>Docente</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <span class="eyebrow">Lezione prova</span>
+          <h2>Trova il corso pi&ugrave; adatto al tuo modo di muoverti.</h2>
+          <p>Scrivici indicando et&agrave;, esperienza e corso di interesse. Ti aiuteremo a scegliere il percorso pi&ugrave; coerente con il tuo punto di partenza.</p>
+        </div>
+        <a class="btn" href="#contatti">Contattaci</a>
+      </div>
+    </section>
+
+    <section class="newsletter" aria-label="Iscrizione newsletter">
+      <div class="container newsletter-inner">
+        <div>
+          <span class="eyebrow">Newsletter</span>
+          <h2>Resta nel ritmo dello studio.</h2>
+          <p>Ricevi aggiornamenti su corsi, lezioni prova, open day, laboratori e appuntamenti speciali di Artemisia Studio Danza.</p>
+        </div>
+        <form class="newsletter-box" onsubmit="event.preventDefault(); alert('Iscrizione pronta: collega la newsletter a una piattaforma email prima della pubblicazione.');">
+          <div class="newsletter-form">
+            <input type="email" name="newsletter-email" placeholder="La tua email" aria-label="Email per newsletter">
+            <button class="btn" type="submit">Iscriviti</button>
+          </div>
+          <span class="newsletter-note">Placeholder tecnico: collegare il form al servizio newsletter scelto prima della messa online.</span>
+        </form>
+      </div>
+    </section>
+
+    <section id="contatti">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <span class="eyebrow">Contatti</span>
+          <h2>Parliamo del tuo percorso.</h2>
+          <p>Per informazioni sui corsi, sulle lezioni prova e sulle iscrizioni, invia un messaggio allo studio. Ti aiuteremo a scegliere il percorso pi&ugrave; adatto al tuo punto di partenza.</p>
+          <div class="contact-list" aria-label="Dettagli di contatto">
+            <div class="contact-item">
+              <b>Indirizzo</b>
+              <span>Via Luigi Galvani, 32-36<br>41012 Carpi MO</span>
+            </div>
+            <div class="contact-item">
+              <b>Telefono</b>
+              <span>000 0000000</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-card form" onsubmit="event.preventDefault(); alert('Messaggio pronto: collega il form a email o gestionale prima della pubblicazione.');">
+          <input type="text" name="nome" placeholder="Nome" aria-label="Nome">
+          <input type="email" name="email" placeholder="Email" aria-label="Email">
+          <input type="text" name="corso" placeholder="Corso di interesse" aria-label="Corso di interesse">
+          <input type="tel" name="telefono" placeholder="Telefono" aria-label="Telefono">
+          <textarea name="messaggio" placeholder="Messaggio" aria-label="Messaggio"></textarea>
+          <button class="btn" type="submit">Invia richiesta</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/artemisia-logo-dark.png" alt="">
+        <div>
+          <b>Artemisia Studio Danza</b>
+          <span>Corpo, ritmo, tecnica, espressione.</span>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Link footer">
+        <a href="#studio">Studio</a>
+        <a href="#corsi">Corsi</a>
+        <a href="#orari">Orari</a>
+        <a href="#socie">Socie</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    const revealTargets = [
+      ".section-head",
+      ".intro-grid",
+      ".course-card",
+      ".method-image",
+      ".method-copy",
+      ".schedule-card",
+      ".team-story",
+      ".person",
+      ".cta-inner",
+      ".newsletter-inner",
+      ".contact-card"
+    ];
+
+    const animatedItems = document.querySelectorAll(revealTargets.join(","));
+    animatedItems.forEach((item, index) => {
+      item.classList.add("reveal");
+      item.style.setProperty("--delay", `${Math.min(index % 5, 4) * 80}ms`);
+    });
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+
+      animatedItems.forEach((item) => observer.observe(item));
+    } else {
+      animatedItems.forEach((item) => item.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
