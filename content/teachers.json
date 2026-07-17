@@ -1,0 +1,59 @@
+{
+  "teachers": [
+    {
+      "id": "francesca",
+      "published": true,
+      "order": 1,
+      "name": "Francesca",
+      "role": "Presidente",
+      "image": "assets/team-francesca.webp",
+      "imageAlt": "Francesca",
+      "imagePositionX": 50,
+      "imagePositionY": 0
+    },
+    {
+      "id": "chiara",
+      "published": true,
+      "order": 2,
+      "name": "Chiara",
+      "role": "Vicepresidente",
+      "image": "assets/team-chiara.webp",
+      "imageAlt": "Chiara",
+      "imagePositionX": 50,
+      "imagePositionY": 0
+    },
+    {
+      "id": "ilenia",
+      "published": true,
+      "order": 3,
+      "name": "Ilenia",
+      "role": "Amministrazione",
+      "image": "assets/team-ilenia.webp",
+      "imageAlt": "Ilenia",
+      "imagePositionX": 50,
+      "imagePositionY": 0
+    },
+    {
+      "id": "sara",
+      "published": true,
+      "order": 4,
+      "name": "Sara",
+      "role": "Docente",
+      "image": "assets/team-sara.webp",
+      "imageAlt": "Sara",
+      "imagePositionX": 50,
+      "imagePositionY": 0
+    },
+    {
+      "id": "valentina",
+      "published": true,
+      "order": 5,
+      "name": "Valentina",
+      "role": "Docente",
+      "image": "assets/team-valentina.webp",
+      "imageAlt": "Valentina",
+      "imagePositionX": 50,
+      "imagePositionY": 0
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "title": "Artemisia Studio Danza | Carpi",
+    "description": "Artemisia Studio Danza: corsi di propedeutica, danza classica, modern, danza per adulti e dance workout."
+  },
+  "topbar": "Studio danza | Propedeutica, classica, modern, adulti e dance workout",
+  "brand": {
+    "name": "Artemisia",
+    "descriptor": "Studio Danza",
+    "logo": "assets/artemisia-logo.jpg",
+    "logoAlt": "Artemisia Studio Danza",
+    "footerLogo": "assets/artemisia-logo-dark.png",
+    "footerLogoAlt": "Artemisia Studio Danza"
+  },
+  "hero": {
+    "eyebrow": "Artemisia Studio Danza",
+    "title": "Il movimento prende forma.",
+    "text": "Un ambiente curato, creativo e sicuro dove bambini, ragazzi e adulti incontrano la danza attraverso tecnica, ascolto, ritmo ed espressione personale.",
+    "image": "assets/artemisia-hero.png",
+    "imageAlt": "Danzatrice in abito bianco in una sala luminosa",
+    "imagePositionX": 50,
+    "imagePositionY": 50,
+    "primaryButtonLabel": "Scopri i corsi",
+    "secondaryButtonLabel": "Prenota una prova",
+    "panelTitle": "Metodo, energia, presenza.",
+    "panelText": "La sala diventa uno spazio di crescita: postura, musicalità, disciplina e libertà espressiva lavorano insieme."
+  },
+  "studio": {
+    "eyebrow": "Lo studio",
+    "title": "Tradizione e innovazione, nel cuore di Carpi.",
+    "paragraphs": [
+      "Artemisia Studio Danza nasce come punto di riferimento per chi desidera scoprire, vivere e approfondire la magia del movimento. Il rigore e l'eleganza del balletto classico incontrano l'energia e la libertà espressiva della danza moderna.",
+      "Ogni allievo è accompagnato in un percorso di crescita tecnica, artistica e personale, dai primi passi dei più piccoli fino alle lezioni per adulti. Per coltivare una passione non esistono limiti di tempo: non è mai troppo tardi per iniziare a ballare."
+    ],
+    "image": "assets/artemisia-logo.jpg",
+    "imageAlt": "Logo Artemisia Studio Danza",
+    "imagePositionX": 50,
+    "imagePositionY": 50,
+    "values": [
+      {
+        "title": "Tecnica",
+        "text": "Studio del corpo, allineamento, controllo e progressione."
+      },
+      {
+        "title": "Ritmo",
+        "text": "Educazione musicale, dinamiche e relazione tra gesto e suono."
+      },
+      {
+        "title": "Espressione",
+        "text": "Movimento come linguaggio personale, emotivo e scenico."
+      }
+    ]
+  },
+  "coursesSection": {
+    "eyebrow": "Corsi",
+    "title": "Percorsi per età, ritmo e obiettivi diversi.",
+    "text": "Dalla propedeutica alla formazione tecnica, dai corsi adulti al dance workout: ogni proposta nasce per rispettare il corpo e valorizzare il movimento."
+  },
+  "method": {
+    "eyebrow": "Metodo",
+    "title": "Il gesto non è solo un passo: è ascolto.",
+    "text": "Ogni corso lavora su corpo, ritmo e spazio. La tecnica serve a costruire sicurezza; la creatività permette a ogni allievo di trovare presenza, intenzione e qualità nel movimento.",
+    "image": "assets/course-adulti.png",
+    "imageAlt": "Danzatrice in movimento in sala prove",
+    "imagePositionX": 50,
+    "imagePositionY": 50,
+    "points": [
+      {
+        "title": "Postura",
+        "text": "Il corpo impara ad allinearsi, sostenersi e muoversi con rispetto della propria fisiologia."
+      },
+      {
+        "title": "Musicalità",
+        "text": "L'ascolto guida il gesto: ritmo, dinamiche e respiro trasformano le note in movimento."
+      },
+      {
+        "title": "Spazio",
+        "text": "La sala diventa relazione: orientamento, distanze, condivisione e presenza nel gruppo."
+      },
+      {
+        "title": "Espressione",
+        "text": "La tecnica sostiene un linguaggio personale, emotivo, chiaro e mai lasciato al caso."
+      },
+      {
+        "title": "Progressione",
+        "text": "Ogni percorso cresce con intensità graduale, varianti accessibili e obiettivi concreti."
+      }
+    ]
+  },
+  "scheduleSection": {
+    "eyebrow": "Orari settimanali",
+    "title": "Trova il momento giusto per danzare.",
+    "text": "Ogni stile ha la sua scheda: giorno e fascia oraria sono subito leggibili, anche da smartphone.",
+    "noteLabel": "Programmazione dimostrativa:",
+    "noteText": "giorni e orari sono da confermare con la segreteria prima della pubblicazione."
+  },
+  "teachersSection": {
+    "eyebrow": "Socie",
+    "title": "Le persone dietro lo studio.",
+    "text": "Cinque socie fondatrici e docenti, unite da oltre vent'anni di carriera artistica e di palcoscenico, guidano una formazione solida, attenta e accogliente.",
+    "groupImage": "assets/team-tutte.webp",
+    "groupImageAlt": "Le cinque socie fondatrici di Artemisia Studio Danza insieme",
+    "groupImagePositionX": 50,
+    "groupImagePositionY": 42,
+    "storyEyebrow": "Un progetto condiviso",
+    "storyTitle": "Cinque percorsi, una sola visione.",
+    "storyText": "L'esperienza diretta sul palcoscenico sostiene una didattica capace di unire precisione accademica, sensibilità artistica e linguaggi contemporanei."
+  },
+  "cta": {
+    "eyebrow": "Lezione prova",
+    "title": "Trova il corso più adatto al tuo modo di muoverti.",
+    "text": "Scrivici indicando età, esperienza e corso di interesse. Ti aiuteremo a scegliere il percorso più coerente con il tuo punto di partenza.",
+    "buttonLabel": "Contattaci",
+    "backgroundImage": "assets/course-classica.png",
+    "backgroundPositionX": 50,
+    "backgroundPositionY": 50
+  },
+  "newsletter": {
+    "eyebrow": "Newsletter",
+    "title": "Resta nel ritmo dello studio.",
+    "text": "Ricevi aggiornamenti su corsi, lezioni prova, open day, laboratori e appuntamenti speciali di Artemisia Studio Danza.",
+    "emailPlaceholder": "La tua email",
+    "buttonLabel": "Iscriviti",
+    "technicalNote": "Placeholder tecnico: collegare il form al servizio newsletter scelto prima della messa online."
+  },
+  "contact": {
+    "eyebrow": "Contatti",
+    "title": "Parliamo del tuo percorso.",
+    "text": "Per informazioni sui corsi, sulle lezioni prova e sulle iscrizioni, invia un messaggio allo studio. Ti aiuteremo a scegliere il percorso più adatto al tuo punto di partenza.",
+    "addressLabel": "Indirizzo",
+    "address": "Via Luigi Galvani, 32-36\n41012 Carpi MO",
+    "phoneLabel": "Telefono",
+    "phone": "000 0000000",
+    "emailLabel": "Email",
+    "email": "",
+    "socialLabel": "Social",
+    "socials": [],
+    "form": {
+      "namePlaceholder": "Nome",
+      "emailPlaceholder": "Email",
+      "coursePlaceholder": "Corso di interesse",
+      "phonePlaceholder": "Telefono",
+      "messagePlaceholder": "Messaggio",
+      "buttonLabel": "Invia richiesta"
+    }
+  },
+  "footer": {
+    "name": "Artemisia Studio Danza",
+    "tagline": "Corpo, ritmo, tecnica, espressione."
+  }
+}

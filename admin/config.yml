@@ -1,0 +1,301 @@
+local_backend: true
+
+backend:
+  name: github
+  repo: FilipG9/ecole-de-ballet
+  branch: main
+
+locale: it
+publish_mode: simple
+media_folder: images/uploads
+public_folder: /images/uploads
+
+editor:
+  preview: false
+
+collections:
+  - name: site_content
+    label: Contenuti del sito
+    files:
+      - label: Home e informazioni generali
+        name: site
+        file: content/site.json
+        format: json
+        fields:
+          - label: Metadati
+            name: meta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Titolo pagina, name: title, widget: string }
+              - { label: Descrizione per i motori di ricerca, name: description, widget: text }
+          - { label: Testo barra superiore, name: topbar, widget: string }
+          - label: Identità dello studio
+            name: brand
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Nome, name: name, widget: string }
+              - { label: Sottotitolo, name: descriptor, widget: string }
+              - { label: Logo principale, name: logo, widget: image, allow_multiple: false, choose_url: false }
+              - { label: Testo alternativo logo, name: logoAlt, widget: string, required: false }
+              - { label: Logo nel footer, name: footerLogo, widget: image, allow_multiple: false, choose_url: false }
+              - { label: Testo alternativo logo footer, name: footerLogoAlt, widget: string, required: false }
+          - label: Apertura home
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Etichetta, name: eyebrow, widget: string }
+              - { label: Titolo, name: title, widget: string }
+              - { label: Testo, name: text, widget: text }
+              - { label: Immagine, name: image, widget: image, allow_multiple: false, choose_url: false }
+              - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
+              - { label: Posizione orizzontale nel ritaglio (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50, hint: "0 = sinistra, 50 = centro, 100 = destra" }
+              - { label: Posizione verticale nel ritaglio (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50, hint: "0 = alto, 50 = centro, 100 = basso" }
+              - { label: Testo pulsante corsi, name: primaryButtonLabel, widget: string }
+              - { label: Testo pulsante prova, name: secondaryButtonLabel, widget: string }
+              - { label: Titolo riquadro, name: panelTitle, widget: string }
+              - { label: Testo riquadro, name: panelText, widget: text }
+          - label: Presentazione della scuola
+            name: studio
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Etichetta, name: eyebrow, widget: string }
+              - { label: Titolo, name: title, widget: string }
+              - label: Paragrafi
+                name: paragraphs
+                widget: list
+                allow_add: false
+                allow_remove: false
+                allow_reorder: false
+                field: { label: Paragrafo, name: paragraph, widget: text }
+              - { label: Immagine, name: image, widget: image, allow_multiple: false, choose_url: false }
+              - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
+              - { label: Posizione orizzontale (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: Posizione verticale (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - label: Valori
+                name: values
+                widget: list
+                allow_add: false
+                allow_remove: false
+                allow_reorder: false
+                collapsed: true
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Titolo, name: title, widget: string }
+                  - { label: Testo, name: text, widget: text }
+          - label: Introduzione corsi
+            name: coursesSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Etichetta, name: eyebrow, widget: string }
+              - { label: Titolo, name: title, widget: string }
+              - { label: Testo, name: text, widget: text }
+          - label: Metodo
+            name: method
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Etichetta, name: eyebrow, widget: string }
+              - { label: Titolo, name: title, widget: string }
+              - { label: Testo, name: text, widget: text }
+              - { label: Immagine, name: image, widget: image, allow_multiple: false, choose_url: false }
+              - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
+              - { label: Posizione orizzontale (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: Posizione verticale (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - label: Punti del metodo
+                name: points
+                widget: list
+                allow_add: false
+                allow_remove: false
+                allow_reorder: false
+                collapsed: true
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Titolo, name: title, widget: string }
+                  - { label: Testo, name: text, widget: text }
+          - label: Testi sezione orari
+            name: scheduleSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Etichetta, name: eyebrow, widget: string }
+              - { label: Titolo, name: title, widget: string }
+              - { label: Testo, name: text, widget: text }
+              - { label: Etichetta nota, name: noteLabel, widget: string }
+              - { label: Testo nota, name: noteText, widget: string }
+          - label: Presentazione insegnanti
+            name: teachersSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Etichetta, name: eyebrow, widget: string }
+              - { label: Titolo, name: title, widget: string }
+              - { label: Testo, name: text, widget: text }
+              - { label: Foto di gruppo, name: groupImage, widget: image, allow_multiple: false, choose_url: false }
+              - { label: Testo alternativo foto di gruppo, name: groupImageAlt, widget: string, required: false }
+              - { label: Posizione orizzontale foto (%), name: groupImagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: Posizione verticale foto (%), name: groupImagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 42 }
+              - { label: Etichetta riquadro, name: storyEyebrow, widget: string }
+              - { label: Titolo riquadro, name: storyTitle, widget: string }
+              - { label: Testo riquadro, name: storyText, widget: text }
+          - label: Invito alla lezione di prova
+            name: cta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Etichetta, name: eyebrow, widget: string }
+              - { label: Titolo, name: title, widget: string }
+              - { label: Testo, name: text, widget: text }
+              - { label: Testo pulsante, name: buttonLabel, widget: string }
+              - { label: Immagine di sfondo, name: backgroundImage, widget: image, allow_multiple: false, choose_url: false }
+              - { label: Posizione orizzontale sfondo (%), name: backgroundPositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: Posizione verticale sfondo (%), name: backgroundPositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+          - label: Newsletter
+            name: newsletter
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Etichetta, name: eyebrow, widget: string }
+              - { label: Titolo, name: title, widget: string }
+              - { label: Testo, name: text, widget: text }
+              - { label: Segnaposto email, name: emailPlaceholder, widget: string }
+              - { label: Testo pulsante, name: buttonLabel, widget: string }
+              - { label: Nota tecnica, name: technicalNote, widget: text }
+          - label: Contatti e social
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Etichetta, name: eyebrow, widget: string }
+              - { label: Titolo, name: title, widget: string }
+              - { label: Testo, name: text, widget: text }
+              - { label: Etichetta indirizzo, name: addressLabel, widget: string }
+              - { label: Indirizzo, name: address, widget: text }
+              - { label: Etichetta telefono, name: phoneLabel, widget: string }
+              - { label: Telefono, name: phone, widget: string }
+              - { label: Etichetta email, name: emailLabel, widget: string }
+              - { label: Email, name: email, widget: string, required: false }
+              - { label: Etichetta social, name: socialLabel, widget: string }
+              - label: Profili social
+                name: socials
+                widget: list
+                required: false
+                allow_add: true
+                allow_remove: true
+                allow_reorder: true
+                collapsed: true
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Nome, name: label, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Modulo contatti
+                name: form
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: Segnaposto nome, name: namePlaceholder, widget: string }
+                  - { label: Segnaposto email, name: emailPlaceholder, widget: string }
+                  - { label: Segnaposto corso, name: coursePlaceholder, widget: string }
+                  - { label: Segnaposto telefono, name: phonePlaceholder, widget: string }
+                  - { label: Segnaposto messaggio, name: messagePlaceholder, widget: string }
+                  - { label: Testo pulsante, name: buttonLabel, widget: string }
+          - label: Footer
+            name: footer
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Nome, name: name, widget: string }
+              - { label: Sottotitolo, name: tagline, widget: string }
+
+      - label: Corsi e orari
+        name: courses
+        file: content/courses.json
+        format: json
+        fields:
+          - label: Corsi
+            name: courses
+            widget: list
+            allow_add: true
+            allow_remove: true
+            allow_reorder: true
+            collapsed: true
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Identificativo, name: id, widget: string, pattern: ['^[a-z0-9-]+$', 'Usa solo lettere minuscole, numeri e trattini'] }
+              - { label: Visibile sul sito, name: published, widget: boolean, default: true }
+              - { label: Ordine storico, name: order, widget: hidden, default: 0 }
+              - { label: Formato grafico originale, name: wide, widget: hidden, default: false }
+              - { label: Nome del corso, name: title, widget: string }
+              - { label: Descrizione, name: description, widget: text }
+              - { label: Immagine, name: image, widget: image, allow_multiple: false, choose_url: false }
+              - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
+              - { label: Posizione orizzontale nel ritaglio (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: Posizione verticale nel ritaglio (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - label: Punti del corso
+                name: features
+                widget: list
+                required: false
+                field: { label: Punto, name: feature, widget: string }
+              - label: Giorni e orari
+                name: schedule
+                widget: list
+                required: false
+                allow_add: true
+                allow_remove: true
+                allow_reorder: true
+                collapsed: true
+                summary: "{{fields.day}} · {{fields.time}}"
+                fields:
+                  - { label: Giorno, name: day, widget: string }
+                  - { label: Orario, name: time, widget: string, hint: "Esempio: 17:00 – 18:30" }
+
+      - label: Insegnanti e socie
+        name: teachers
+        file: content/teachers.json
+        format: json
+        fields:
+          - label: Insegnanti
+            name: teachers
+            widget: list
+            allow_add: true
+            allow_remove: true
+            allow_reorder: true
+            collapsed: true
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Identificativo, name: id, widget: string, pattern: ['^[a-z0-9-]+$', 'Usa solo lettere minuscole, numeri e trattini'] }
+              - { label: Visibile sul sito, name: published, widget: boolean, default: true }
+              - { label: Ordine storico, name: order, widget: hidden, default: 0 }
+              - { label: Nome, name: name, widget: string }
+              - { label: Ruolo, name: role, widget: string }
+              - { label: Foto, name: image, widget: image, allow_multiple: false, choose_url: false }
+              - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
+              - { label: Posizione orizzontale nel ritaglio (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: Posizione verticale nel ritaglio (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 0 }
+
+      - label: Galleria
+        name: gallery
+        file: content/gallery.json
+        format: json
+        fields:
+          - label: Immagini
+            name: items
+            widget: list
+            allow_add: true
+            allow_remove: true
+            allow_reorder: true
+            collapsed: true
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: Identificativo, name: id, widget: string, pattern: ['^[a-z0-9-]+$', 'Usa solo lettere minuscole, numeri e trattini'] }
+              - { label: Visibile sul sito, name: published, widget: boolean, default: true }
+              - { label: Ordine storico, name: order, widget: hidden, default: 0 }
+              - { label: Immagine, name: image, widget: image, allow_multiple: false, choose_url: false }
+              - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
+              - { label: Didascalia, name: caption, widget: string, required: false }
+              - { label: Posizione orizzontale nel ritaglio (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: Posizione verticale nel ritaglio (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }

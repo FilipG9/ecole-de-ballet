@@ -698,11 +698,12 @@
     }
 
     .cta{
+      --cta-image:url("assets/course-classica.png");
       padding:0;
       color:#fff;
       background:
         linear-gradient(90deg,rgba(79,14,130,.92),rgba(67,55,66,.76)),
-        url("assets/course-classica.png") center/cover no-repeat;
+        var(--cta-image) center/cover no-repeat;
     }
     .cta-inner{
       min-height:390px;
@@ -1077,7 +1078,7 @@
         </div>
 
         <div class="course-grid">
-          <article class="course-card wide">
+          <article class="course-card wide" data-content-id="propedeutica">
             <img src="assets/course-propedeutica.png" alt="Danzatrice vista dall'alto in sala luminosa">
             <div class="course-copy">
               <h3>Propedeutica</h3>
@@ -1090,7 +1091,7 @@
             </div>
           </article>
 
-          <article class="course-card wide">
+          <article class="course-card wide" data-content-id="danza-classica">
             <img src="assets/course-classica.png" alt="Danzatrice classica in abito bianco">
             <div class="course-copy">
               <h3>Danza Classica</h3>
@@ -1103,7 +1104,7 @@
             </div>
           </article>
 
-          <article class="course-card">
+          <article class="course-card" data-content-id="modern">
             <img src="assets/course-modern.png" alt="Danzatrice modern in movimento">
             <div class="course-copy">
               <h3>Modern</h3>
@@ -1116,7 +1117,7 @@
             </div>
           </article>
 
-          <article class="course-card">
+          <article class="course-card" data-content-id="danza-adulti">
             <img src="assets/course-adulti.png" alt="Danzatrice adulta in movimento fluido">
             <div class="course-copy">
               <h3>Danza Adulti</h3>
@@ -1129,7 +1130,7 @@
             </div>
           </article>
 
-          <article class="course-card">
+          <article class="course-card" data-content-id="dance-workout">
             <img src="assets/course-workout.png" alt="Danzatrice in posa dinamica">
             <div class="course-copy">
               <h3>Dance Workout</h3>
@@ -1188,35 +1189,35 @@
           <p class="lead">Ogni stile ha la sua scheda: giorno e fascia oraria sono subito leggibili, anche da smartphone.</p>
         </div>
         <div class="schedule-grid">
-          <article class="schedule-card">
+          <article class="schedule-card" data-content-id="propedeutica">
             <div class="schedule-top"><h3>Propedeutica</h3><span class="schedule-index">01</span></div>
             <div class="schedule-slots">
               <div class="schedule-slot"><span>Luned&igrave;</span><time datetime="16:30">16:30 &ndash; 17:30</time></div>
               <div class="schedule-slot"><span>Mercoled&igrave;</span><time datetime="16:30">16:30 &ndash; 17:30</time></div>
             </div>
           </article>
-          <article class="schedule-card">
+          <article class="schedule-card" data-content-id="danza-classica">
             <div class="schedule-top"><h3>Danza Classica</h3><span class="schedule-index">02</span></div>
             <div class="schedule-slots">
               <div class="schedule-slot"><span>Marted&igrave;</span><time datetime="17:00">17:00 &ndash; 18:30</time></div>
               <div class="schedule-slot"><span>Gioved&igrave;</span><time datetime="17:00">17:00 &ndash; 18:30</time></div>
             </div>
           </article>
-          <article class="schedule-card">
+          <article class="schedule-card" data-content-id="modern">
             <div class="schedule-top"><h3>Modern</h3><span class="schedule-index">03</span></div>
             <div class="schedule-slots">
               <div class="schedule-slot"><span>Luned&igrave;</span><time datetime="18:00">18:00 &ndash; 19:15</time></div>
               <div class="schedule-slot"><span>Mercoled&igrave;</span><time datetime="18:00">18:00 &ndash; 19:15</time></div>
             </div>
           </article>
-          <article class="schedule-card">
+          <article class="schedule-card" data-content-id="danza-adulti">
             <div class="schedule-top"><h3>Danza Adulti</h3><span class="schedule-index">04</span></div>
             <div class="schedule-slots">
               <div class="schedule-slot"><span>Marted&igrave;</span><time datetime="20:00">20:00 &ndash; 21:15</time></div>
               <div class="schedule-slot"><span>Gioved&igrave;</span><time datetime="20:00">20:00 &ndash; 21:15</time></div>
             </div>
           </article>
-          <article class="schedule-card">
+          <article class="schedule-card" data-content-id="dance-workout">
             <div class="schedule-top"><h3>Dance Workout</h3><span class="schedule-index">05</span></div>
             <div class="schedule-slots">
               <div class="schedule-slot"><span>Mercoled&igrave;</span><time datetime="19:30">19:30 &ndash; 20:30</time></div>
@@ -1246,35 +1247,35 @@
           </div>
         </div>
         <div class="team-grid">
-          <article class="person">
+          <article class="person" data-content-id="francesca">
             <div class="person-photo"><img src="assets/team-francesca.webp" alt="Francesca"></div>
             <div class="person-info">
               <h3>Francesca</h3>
               <p>Presidente</p>
             </div>
           </article>
-          <article class="person">
+          <article class="person" data-content-id="chiara">
             <div class="person-photo"><img src="assets/team-chiara.webp" alt="Chiara"></div>
             <div class="person-info">
               <h3>Chiara</h3>
               <p>Vicepresidente</p>
             </div>
           </article>
-          <article class="person">
+          <article class="person" data-content-id="ilenia">
             <div class="person-photo"><img src="assets/team-ilenia.webp" alt="Ilenia"></div>
             <div class="person-info">
               <h3>Ilenia</h3>
               <p>Amministrazione</p>
             </div>
           </article>
-          <article class="person">
+          <article class="person" data-content-id="sara">
             <div class="person-photo"><img src="assets/team-sara.webp" alt="Sara"></div>
             <div class="person-info">
               <h3>Sara</h3>
               <p>Docente</p>
             </div>
           </article>
-          <article class="person">
+          <article class="person" data-content-id="valentina">
             <div class="person-photo"><img src="assets/team-valentina.webp" alt="Valentina"></div>
             <div class="person-info">
               <h3>Valentina</h3>
@@ -1320,13 +1321,21 @@
           <h2>Parliamo del tuo percorso.</h2>
           <p>Per informazioni sui corsi, sulle lezioni prova e sulle iscrizioni, invia un messaggio allo studio. Ti aiuteremo a scegliere il percorso pi&ugrave; adatto al tuo punto di partenza.</p>
           <div class="contact-list" aria-label="Dettagli di contatto">
-            <div class="contact-item">
+            <div class="contact-item" data-cms-address>
               <b>Indirizzo</b>
               <span>Via Luigi Galvani, 32-36<br>41012 Carpi MO</span>
             </div>
-            <div class="contact-item">
+            <div class="contact-item" data-cms-phone>
               <b>Telefono</b>
               <span>000 0000000</span>
+            </div>
+            <div class="contact-item" data-cms-contact-email hidden>
+              <b>Email</b>
+              <span></span>
+            </div>
+            <div class="contact-item" data-cms-contact-socials hidden>
+              <b>Social</b>
+              <span data-cms-social-links></span>
             </div>
           </div>
         </div>
@@ -1360,40 +1369,49 @@
       </nav>
     </div>
   </footer>
+  <script src="js/content-loader.js"></script>
   <script>
-    const revealTargets = [
-      ".section-head",
-      ".intro-grid",
-      ".course-card",
-      ".method-image",
-      ".method-copy",
-      ".schedule-card",
-      ".team-story",
-      ".person",
-      ".cta-inner",
-      ".newsletter-inner",
-      ".contact-card"
-    ];
+    function initializeRevealAnimations() {
+      const revealTargets = [
+        ".section-head",
+        ".intro-grid",
+        ".course-card",
+        ".method-image",
+        ".method-copy",
+        ".schedule-card",
+        ".team-story",
+        ".person",
+        ".cta-inner",
+        ".newsletter-inner",
+        ".contact-card"
+      ];
 
-    const animatedItems = document.querySelectorAll(revealTargets.join(","));
-    animatedItems.forEach((item, index) => {
-      item.classList.add("reveal");
-      item.style.setProperty("--delay", `${Math.min(index % 5, 4) * 80}ms`);
-    });
+      const animatedItems = document.querySelectorAll(revealTargets.join(","));
+      animatedItems.forEach((item, index) => {
+        item.classList.add("reveal");
+        item.style.setProperty("--delay", `${Math.min(index % 5, 4) * 80}ms`);
+      });
 
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
 
-      animatedItems.forEach((item) => observer.observe(item));
+        animatedItems.forEach((item) => observer.observe(item));
+      } else {
+        animatedItems.forEach((item) => item.classList.add("is-visible"));
+      }
+    }
+
+    if (document.documentElement.dataset.cmsReady === "true") {
+      initializeRevealAnimations();
     } else {
-      animatedItems.forEach((item) => item.classList.add("is-visible"));
+      document.addEventListener("cms:content-ready", initializeRevealAnimations, { once: true });
     }
   </script>
 </body>

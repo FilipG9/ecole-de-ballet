@@ -1,0 +1,139 @@
+{
+  "courses": [
+    {
+      "published": true,
+      "imageAlt": "Danzatrice vista dall'alto in sala luminosa",
+      "order": 1,
+      "wide": true,
+      "imagePositionX": 50,
+      "imagePositionY": 50,
+      "schedule": [
+        {
+          "day": "Lunedì",
+          "time": "16:30 – 17:30"
+        },
+        {
+          "day": "Mercoledì",
+          "time": "16:30 – 17:30"
+        }
+      ],
+      "title": "Propedeutica",
+      "id": "propedeutica",
+      "image": "/images/uploads/chatgpt-image-14-lug-2026-23_57_57-1-.png",
+      "description": "Il primo incontro con la danza attraverso gioco, scoperta e crescita in un ambiente stimolante e sicuro.",
+      "features": [
+        "Coordinazione, equilibrio e postura",
+        "Ritmo, ascolto e musicalità",
+        "Spazio, relazione e condivisione"
+      ]
+    },
+    {
+      "published": true,
+      "imageAlt": "Danzatrice classica in abito bianco",
+      "order": 2,
+      "wide": true,
+      "imagePositionX": 50,
+      "imagePositionY": 50,
+      "schedule": [
+        {
+          "day": "Martedì",
+          "time": "17:00 – 18:30"
+        },
+        {
+          "day": "Giovedì",
+          "time": "17:00 – 18:30"
+        }
+      ],
+      "title": "Danza Classica",
+      "id": "danza-classica",
+      "image": "assets/course-classica.png",
+      "description": "La base tecnica imprescindibile: rigore, eleganza e profonda espressione artistica.",
+      "features": [
+        "Lavoro alla sbarra e al centro",
+        "Allineamento, flessibilità e controllo",
+        "Disciplina, concentrazione e musicalità"
+      ]
+    },
+    {
+      "published": true,
+      "imageAlt": "Danzatrice modern in movimento",
+      "order": 3,
+      "wide": false,
+      "imagePositionX": 50,
+      "imagePositionY": 50,
+      "schedule": [
+        {
+          "day": "Lunedì",
+          "time": "18:00 – 19:15"
+        },
+        {
+          "day": "Mercoledì",
+          "time": "18:00 – 19:15"
+        }
+      ],
+      "title": "Modern",
+      "id": "modern",
+      "image": "assets/course-modern.png",
+      "description": "Energia, dinamismo e libertà espressiva, con lavoro sul respiro, sul peso e sullo spazio.",
+      "features": [
+        "Floorwork e radicamento",
+        "Dinamiche e cambi di direzione",
+        "Linguaggio corporeo personale"
+      ]
+    },
+    {
+      "published": true,
+      "imageAlt": "Danzatrice adulta in movimento fluido",
+      "order": 4,
+      "wide": false,
+      "imagePositionX": 50,
+      "imagePositionY": 50,
+      "schedule": [
+        {
+          "day": "Martedì",
+          "time": "20:00 – 21:15"
+        },
+        {
+          "day": "Giovedì",
+          "time": "20:00 – 21:15"
+        }
+      ],
+      "title": "Danza Adulti",
+      "id": "danza-adulti",
+      "image": "assets/course-adulti.png",
+      "description": "Un corso accogliente per iniziare o riprendere, con studio graduale delle basi classiche e moderne.",
+      "features": [
+        "Benessere, postura e tono",
+        "Movimento fluido e dinamico",
+        "Tempo per sé, senza giudizio"
+      ]
+    },
+    {
+      "published": true,
+      "imageAlt": "Danzatrice in posa dinamica",
+      "order": 5,
+      "wide": false,
+      "imagePositionX": 50,
+      "imagePositionY": 50,
+      "schedule": [
+        {
+          "day": "Mercoledì",
+          "time": "19:30 – 20:30"
+        },
+        {
+          "day": "Venerdì",
+          "time": "19:30 – 20:30"
+        }
+      ],
+      "title": "Dance Workout",
+      "id": "dance-workout",
+      "image": "assets/course-workout.png",
+      "description": "Danza e fitness in un percorso inclusivo, accessibile e modulabile per intensità.",
+      "features": [
+        "Progressione dolce e basso impatto",
+        "Cardio e tonificazione graduali",
+        "Energia, ritmo e leggerezza"
+      ]
+    }
+  ]
+}
