@@ -7,6 +7,7 @@
       "wide": true,
       "imagePositionX": 50,
       "imagePositionY": 50,
+      "imageFit": "cover",
       "schedule": [
         {
           "day": "Lunedì",
@@ -34,6 +35,7 @@
       "wide": true,
       "imagePositionX": 50,
       "imagePositionY": 50,
+      "imageFit": "cover",
       "schedule": [
         {
           "day": "Martedì",
@@ -61,6 +63,7 @@
       "wide": false,
       "imagePositionX": 50,
       "imagePositionY": 50,
+      "imageFit": "cover",
       "schedule": [
         {
           "day": "Lunedì",
@@ -88,6 +91,7 @@
       "wide": false,
       "imagePositionX": 50,
       "imagePositionY": 50,
+      "imageFit": "cover",
       "schedule": [
         {
           "day": "Martedì",
@@ -115,6 +119,7 @@
       "wide": false,
       "imagePositionX": 50,
       "imagePositionY": 50,
+      "imageFit": "cover",
       "schedule": [
         {
           "day": "Mercoledì",

@@ -5,8 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <title>Artemisia | Gestione contenuti</title>
+  <style>
+    body{margin:0;background:#fffafd;color:#433742;font-family:Arial,sans-serif}
+    .cms-loading{max-width:680px;margin:18vh auto;padding:32px;text-align:center}
+    .cms-loading h1{color:#4f0e82;font-size:28px}
+    .cms-loading p{line-height:1.6;color:rgba(67,55,66,.72)}
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@3.11.0/dist/decap-cms.js"></script>
+  <div class="cms-loading">
+    <h1>Gestione contenuti Artemisia</h1>
+    <p>Caricamento della consolle. Le aree sono ordinate in Home, Corsi, Insegnanti e Galleria.</p>
+  </div>
+  <noscript>Per usare il pannello amministrativo devi attivare JavaScript.</noscript>
+  <script src="decap-cms.js" onload="document.querySelector('.cms-loading')?.remove()"></script>
 </body>
 </html>

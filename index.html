@@ -5,10 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Artemisia Studio Danza | Carpi</title>
   <meta name="description" content="Artemisia Studio Danza: corsi di propedeutica, danza classica, modern, danza per adulti e dance workout." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    @font-face{
+      font-family:"Cormorant Garamond";
+      src:url("assets/fonts/cormorant-garamond-normal-latin.woff2") format("woff2");
+      font-style:normal;
+      font-weight:400 500;
+      font-display:swap;
+    }
+    @font-face{
+      font-family:"Cormorant Garamond";
+      src:url("assets/fonts/cormorant-garamond-italic-latin.woff2") format("woff2");
+      font-style:italic;
+      font-weight:400 500;
+      font-display:swap;
+    }
+    @font-face{
+      font-family:"Inter";
+      src:url("assets/fonts/inter-normal-latin.woff2") format("woff2");
+      font-style:normal;
+      font-weight:400 700;
+      font-display:swap;
+    }
     :root{
       --plum:#4f0e82;
       --violet:#865ca1;
@@ -826,12 +844,17 @@
       text-transform:uppercase;
       margin-bottom:5px;
     }
-    .contact-item span{
+    .contact-item span,
+    .contact-item > a{
       display:block;
       color:rgba(67,55,66,.76);
       font-size:15px;
       line-height:1.65;
     }
+    .contact-item > a:hover,
+    .contact-item > a:focus-visible,
+    .contact-item span a:hover,
+    .contact-item span a:focus-visible{text-decoration:underline}
     .form{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -862,6 +885,25 @@
       width:max-content;
       min-width:190px;
     }
+    .form-consent{
+      grid-column:1/-1;
+      display:grid;
+      grid-template-columns:18px 1fr;
+      gap:10px;
+      align-items:start;
+      color:rgba(67,55,66,.72);
+      font-size:12px;
+      line-height:1.55;
+    }
+    .form-consent input[type="checkbox"]{
+      width:18px;
+      min-height:18px;
+      height:18px;
+      margin:1px 0 0;
+      accent-color:var(--plum);
+    }
+    .form-consent a{text-decoration:underline;text-underline-offset:2px}
+    .newsletter-consent{margin-top:12px}
 
     footer{
       background:#1f1720;
@@ -904,6 +946,43 @@
       text-transform:uppercase;
       font-weight:800;
     }
+    .footer-bottom{
+      max-width:var(--max);
+      margin:30px auto 0;
+      padding:24px 22px 0;
+      border-top:1px solid rgba(255,255,255,.12);
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      align-items:flex-end;
+    }
+    .footer-social-title{
+      display:block;
+      margin-bottom:10px;
+      color:rgba(255,255,255,.62);
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .footer-social-list{display:flex;flex-wrap:wrap;gap:8px}
+    .footer-social{
+      display:inline-flex;
+      min-height:38px;
+      align-items:center;
+      padding:0 14px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;
+      color:rgba(255,255,255,.86);
+      font-size:12px;
+      letter-spacing:.04em;
+    }
+    a.footer-social:hover,
+    a.footer-social:focus-visible{border-color:var(--rose);color:var(--rose)}
+    .footer-social.is-placeholder{opacity:.45}
+    .legal-links{display:flex;gap:16px;color:rgba(255,255,255,.62);font-size:12px}
+    .legal-links a:hover,
+    .legal-links a:focus-visible{color:#fff;text-decoration:underline}
 
     .reveal{
       opacity:0;
@@ -968,6 +1047,7 @@
       .cta-inner{gap:22px}
       .footer-inner{align-items:flex-start;flex-direction:column}
       .footer-links{flex-wrap:wrap}
+      .footer-bottom{align-items:flex-start;flex-direction:column}
     }
 
     @media(max-width:560px){
@@ -1304,11 +1384,15 @@
           <h2>Resta nel ritmo dello studio.</h2>
           <p>Ricevi aggiornamenti su corsi, lezioni prova, open day, laboratori e appuntamenti speciali di Artemisia Studio Danza.</p>
         </div>
-        <form class="newsletter-box" onsubmit="event.preventDefault(); alert('Iscrizione pronta: collega la newsletter a una piattaforma email prima della pubblicazione.');">
+        <form class="newsletter-box">
           <div class="newsletter-form">
-            <input type="email" name="newsletter-email" placeholder="La tua email" aria-label="Email per newsletter">
+            <input type="email" name="newsletter-email" placeholder="La tua email" aria-label="Email per newsletter" autocomplete="email" required>
             <button class="btn" type="submit">Iscriviti</button>
           </div>
+          <label class="form-consent newsletter-consent">
+            <input type="checkbox" name="newsletter-consent" value="accepted" required>
+            <span><span class="newsletter-consent-text">Acconsento a ricevere via email la newsletter di Artemisia Studio Danza. Posso revocare il consenso in qualsiasi momento.</span> <a class="newsletter-privacy-link" href="privacy.html">Leggi l'informativa privacy</a>.</span>
+          </label>
           <span class="newsletter-note">Placeholder tecnico: collegare il form al servizio newsletter scelto prima della messa online.</span>
         </form>
       </div>
@@ -1323,15 +1407,15 @@
           <div class="contact-list" aria-label="Dettagli di contatto">
             <div class="contact-item" data-cms-address>
               <b>Indirizzo</b>
-              <span>Via Luigi Galvani, 32-36<br>41012 Carpi MO</span>
+              <a href="https://share.google/5KgAHLomITS0rbNvQ" target="_blank" rel="noopener noreferrer">Via Luigi Galvani, 32-36<br>41012 Carpi MO</a>
             </div>
             <div class="contact-item" data-cms-phone>
               <b>Telefono</b>
-              <span>000 0000000</span>
+              <a href="tel:0000000000">000 0000000</a>
             </div>
             <div class="contact-item" data-cms-contact-email hidden>
               <b>Email</b>
-              <span></span>
+              <a href="mailto:"></a>
             </div>
             <div class="contact-item" data-cms-contact-socials hidden>
               <b>Social</b>
@@ -1339,12 +1423,16 @@
             </div>
           </div>
         </div>
-        <form class="contact-card form" onsubmit="event.preventDefault(); alert('Messaggio pronto: collega il form a email o gestionale prima della pubblicazione.');">
-          <input type="text" name="nome" placeholder="Nome" aria-label="Nome">
-          <input type="email" name="email" placeholder="Email" aria-label="Email">
+        <form class="contact-card form">
+          <input type="text" name="nome" placeholder="Nome" aria-label="Nome" autocomplete="name" required>
+          <input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" required>
           <input type="text" name="corso" placeholder="Corso di interesse" aria-label="Corso di interesse">
-          <input type="tel" name="telefono" placeholder="Telefono" aria-label="Telefono">
-          <textarea name="messaggio" placeholder="Messaggio" aria-label="Messaggio"></textarea>
+          <input type="tel" name="telefono" placeholder="Telefono" aria-label="Telefono" autocomplete="tel">
+          <textarea name="messaggio" placeholder="Messaggio" aria-label="Messaggio" required></textarea>
+          <label class="form-consent">
+            <input type="checkbox" name="privacy-acknowledgement" value="read" required>
+            <span><span class="contact-consent-text">Dichiaro di aver letto l'informativa privacy sul trattamento dei dati inviati con questo modulo.</span> <a class="contact-privacy-link" href="privacy.html">Informativa privacy</a>.</span>
+          </label>
           <button class="btn" type="submit">Invia richiesta</button>
         </form>
       </div>
@@ -1366,6 +1454,19 @@
         <a href="#orari">Orari</a>
         <a href="#socie">Socie</a>
         <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        <span class="footer-social-title">Seguici sui social</span>
+        <div class="footer-social-list" data-cms-footer-socials aria-label="Profili social">
+          <span class="footer-social is-placeholder" aria-disabled="true">Instagram</span>
+          <span class="footer-social is-placeholder" aria-disabled="true">Facebook</span>
+          <span class="footer-social is-placeholder" aria-disabled="true">TikTok</span>
+        </div>
+      </div>
+      <nav class="legal-links" aria-label="Informazioni legali">
+        <a href="privacy.html">Privacy</a>
       </nav>
     </div>
   </footer>

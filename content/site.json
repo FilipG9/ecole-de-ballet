@@ -9,8 +9,10 @@
     "descriptor": "Studio Danza",
     "logo": "assets/artemisia-logo.jpg",
     "logoAlt": "Artemisia Studio Danza",
+    "logoFit": "contain",
     "footerLogo": "assets/artemisia-logo-dark.png",
-    "footerLogoAlt": "Artemisia Studio Danza"
+    "footerLogoAlt": "Artemisia Studio Danza",
+    "footerLogoFit": "contain"
   },
   "hero": {
     "eyebrow": "Artemisia Studio Danza",
@@ -18,6 +20,7 @@
     "text": "Un ambiente curato, creativo e sicuro dove bambini, ragazzi e adulti incontrano la danza attraverso tecnica, ascolto, ritmo ed espressione personale.",
     "image": "assets/artemisia-hero.png",
     "imageAlt": "Danzatrice in abito bianco in una sala luminosa",
+    "imageFit": "cover",
     "imagePositionX": 50,
     "imagePositionY": 50,
     "primaryButtonLabel": "Scopri i corsi",
@@ -34,6 +37,7 @@
     ],
     "image": "assets/artemisia-logo.jpg",
     "imageAlt": "Logo Artemisia Studio Danza",
+    "imageFit": "contain",
     "imagePositionX": 50,
     "imagePositionY": 50,
     "values": [
@@ -62,6 +66,7 @@
     "text": "Ogni corso lavora su corpo, ritmo e spazio. La tecnica serve a costruire sicurezza; la creatività permette a ogni allievo di trovare presenza, intenzione e qualità nel movimento.",
     "image": "assets/course-adulti.png",
     "imageAlt": "Danzatrice in movimento in sala prove",
+    "imageFit": "cover",
     "imagePositionX": 50,
     "imagePositionY": 50,
     "points": [
@@ -100,6 +105,7 @@
     "text": "Cinque socie fondatrici e docenti, unite da oltre vent'anni di carriera artistica e di palcoscenico, guidano una formazione solida, attenta e accogliente.",
     "groupImage": "assets/team-tutte.webp",
     "groupImageAlt": "Le cinque socie fondatrici di Artemisia Studio Danza insieme",
+    "groupImageFit": "cover",
     "groupImagePositionX": 50,
     "groupImagePositionY": 42,
     "storyEyebrow": "Un progetto condiviso",
@@ -121,7 +127,10 @@
     "text": "Ricevi aggiornamenti su corsi, lezioni prova, open day, laboratori e appuntamenti speciali di Artemisia Studio Danza.",
     "emailPlaceholder": "La tua email",
     "buttonLabel": "Iscriviti",
-    "technicalNote": "Placeholder tecnico: collegare il form al servizio newsletter scelto prima della messa online."
+    "technicalNote": "Il servizio newsletter non è ancora collegato. Configura l'endpoint nel pannello prima della pubblicazione.",
+    "formAction": "",
+    "consentLabel": "Acconsento a ricevere via email la newsletter di Artemisia Studio Danza. Posso revocare il consenso in qualsiasi momento.",
+    "privacyLinkLabel": "Leggi l'informativa privacy"
   },
   "contact": {
     "eyebrow": "Contatti",
@@ -129,23 +138,57 @@
     "text": "Per informazioni sui corsi, sulle lezioni prova e sulle iscrizioni, invia un messaggio allo studio. Ti aiuteremo a scegliere il percorso più adatto al tuo punto di partenza.",
     "addressLabel": "Indirizzo",
     "address": "Via Luigi Galvani, 32-36\n41012 Carpi MO",
+    "mapsUrl": "https://share.google/5KgAHLomITS0rbNvQ",
     "phoneLabel": "Telefono",
     "phone": "000 0000000",
     "emailLabel": "Email",
     "email": "",
     "socialLabel": "Social",
-    "socials": [],
+    "socials": [
+      {
+        "label": "Instagram",
+        "url": "",
+        "published": true
+      },
+      {
+        "label": "Facebook",
+        "url": "",
+        "published": true
+      },
+      {
+        "label": "TikTok",
+        "url": "",
+        "published": true
+      }
+    ],
     "form": {
       "namePlaceholder": "Nome",
       "emailPlaceholder": "Email",
       "coursePlaceholder": "Corso di interesse",
       "phonePlaceholder": "Telefono",
       "messagePlaceholder": "Messaggio",
-      "buttonLabel": "Invia richiesta"
+      "buttonLabel": "Invia richiesta",
+      "formAction": "",
+      "privacyAcknowledgement": "Dichiaro di aver letto l'informativa privacy sul trattamento dei dati inviati con questo modulo.",
+      "privacyLinkLabel": "Informativa privacy"
     }
   },
   "footer": {
     "name": "Artemisia Studio Danza",
-    "tagline": "Corpo, ritmo, tecnica, espressione."
+    "tagline": "Corpo, ritmo, tecnica, espressione.",
+    "socialTitle": "Seguici sui social"
+  },
+  "privacy": {
+    "lastUpdated": "19 luglio 2026",
+    "controllerName": "DA COMPLETARE: denominazione legale del titolare",
+    "controllerAddress": "Via Luigi Galvani, 32-36, 41012 Carpi (MO)",
+    "controllerEmail": "DA COMPLETARE: email privacy del titolare",
+    "legalDetails": "DA COMPLETARE: codice fiscale o partita IVA dell'associazione o società",
+    "websiteHost": "DA COMPLETARE: fornitore di hosting e Paese di trattamento",
+    "newsletterProvider": "DA COMPLETARE: piattaforma newsletter, sede e garanzie per eventuali trasferimenti extra UE",
+    "newsletterRetention": "Fino alla revoca del consenso o alla disiscrizione, salvo il tempo strettamente necessario a documentare la revoca.",
+    "contactRetention": "Per il tempo necessario a rispondere e gestire la richiesta; definire nel registro dei trattamenti un termine massimo coerente.",
+    "additionalRecipients": "Personale autorizzato e fornitori nominati responsabili del trattamento, nei limiti necessari all'erogazione dei servizi.",
+    "complaintAuthority": "Garante per la protezione dei dati personali"
   }
 }

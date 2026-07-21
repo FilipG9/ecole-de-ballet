@@ -5,6 +5,7 @@
       "order": 0,
       "imagePositionX": 50,
       "imagePositionY": 50,
+      "imageFit": "cover",
       "image": "/images/uploads/palette-di-colori.jpg",
       "id": "prova"
     }

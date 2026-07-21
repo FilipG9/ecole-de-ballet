@@ -14,23 +14,25 @@ editor:
   preview: false
 
 collections:
-  - name: site_content
-    label: Contenuti del sito
+  - name: home_content
+    label: "01 · Home, contatti e privacy"
     files:
-      - label: Home e informazioni generali
+      - label: "Modifica home e informazioni"
         name: site
         file: content/site.json
         format: json
         fields:
-          - label: Metadati
+          - label: "01 · Titolo pagina e barra superiore"
             name: meta
             widget: object
             collapsed: true
+            hint: "Testi mostrati nella scheda del browser e nei risultati dei motori di ricerca."
             fields:
               - { label: Titolo pagina, name: title, widget: string }
               - { label: Descrizione per i motori di ricerca, name: description, widget: text }
           - { label: Testo barra superiore, name: topbar, widget: string }
-          - label: Identità dello studio
+
+          - label: "02 · Logo e nome dello studio"
             name: brand
             widget: object
             collapsed: true
@@ -38,26 +40,50 @@ collections:
               - { label: Nome, name: name, widget: string }
               - { label: Sottotitolo, name: descriptor, widget: string }
               - { label: Logo principale, name: logo, widget: image, allow_multiple: false, choose_url: false }
-              - { label: Testo alternativo logo, name: logoAlt, widget: string, required: false }
+              - { label: Testo alternativo logo, name: logoAlt, widget: string, required: false, hint: "Descrive l'immagine per accessibilità e motori di ricerca." }
+              - label: Adattamento logo
+                name: logoFit
+                widget: select
+                default: contain
+                options:
+                  - { label: "Mostra l'immagine intera", value: contain }
+                  - { label: "Ritaglia e riempi il riquadro", value: cover }
               - { label: Logo nel footer, name: footerLogo, widget: image, allow_multiple: false, choose_url: false }
               - { label: Testo alternativo logo footer, name: footerLogoAlt, widget: string, required: false }
-          - label: Apertura home
+              - label: Adattamento logo footer
+                name: footerLogoFit
+                widget: select
+                default: contain
+                options:
+                  - { label: "Mostra l'immagine intera", value: contain }
+                  - { label: "Ritaglia e riempi il riquadro", value: cover }
+
+          - label: "03 · Apertura della home"
             name: hero
             widget: object
             collapsed: true
+            hint: "Il riquadro mantiene sempre le dimensioni previste dal design. Posizione X/Y sposta il punto messo a fuoco nel ritaglio."
             fields:
               - { label: Etichetta, name: eyebrow, widget: string }
               - { label: Titolo, name: title, widget: string }
               - { label: Testo, name: text, widget: text }
               - { label: Immagine, name: image, widget: image, allow_multiple: false, choose_url: false }
               - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
-              - { label: Posizione orizzontale nel ritaglio (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50, hint: "0 = sinistra, 50 = centro, 100 = destra" }
-              - { label: Posizione verticale nel ritaglio (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50, hint: "0 = alto, 50 = centro, 100 = basso" }
+              - label: Adattamento immagine
+                name: imageFit
+                widget: select
+                default: cover
+                options:
+                  - { label: "Ritaglia e riempi il riquadro", value: cover }
+                  - { label: "Mostra l'immagine intera", value: contain }
+              - { label: "Fuoco orizzontale X (%)", name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50, hint: "0 = sinistra · 50 = centro · 100 = destra" }
+              - { label: "Fuoco verticale Y (%)", name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50, hint: "0 = alto · 50 = centro · 100 = basso" }
               - { label: Testo pulsante corsi, name: primaryButtonLabel, widget: string }
               - { label: Testo pulsante prova, name: secondaryButtonLabel, widget: string }
               - { label: Titolo riquadro, name: panelTitle, widget: string }
               - { label: Testo riquadro, name: panelText, widget: text }
-          - label: Presentazione della scuola
+
+          - label: "04 · Presentazione della scuola"
             name: studio
             widget: object
             collapsed: true
@@ -73,8 +99,15 @@ collections:
                 field: { label: Paragrafo, name: paragraph, widget: text }
               - { label: Immagine, name: image, widget: image, allow_multiple: false, choose_url: false }
               - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
-              - { label: Posizione orizzontale (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
-              - { label: Posizione verticale (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - label: Adattamento immagine
+                name: imageFit
+                widget: select
+                default: contain
+                options:
+                  - { label: "Mostra l'immagine intera", value: contain }
+                  - { label: "Ritaglia e riempi il riquadro", value: cover }
+              - { label: "Fuoco orizzontale X (%)", name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: "Fuoco verticale Y (%)", name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
               - label: Valori
                 name: values
                 widget: list
@@ -86,7 +119,8 @@ collections:
                 fields:
                   - { label: Titolo, name: title, widget: string }
                   - { label: Testo, name: text, widget: text }
-          - label: Introduzione corsi
+
+          - label: "05 · Introduzione corsi"
             name: coursesSection
             widget: object
             collapsed: true
@@ -94,7 +128,8 @@ collections:
               - { label: Etichetta, name: eyebrow, widget: string }
               - { label: Titolo, name: title, widget: string }
               - { label: Testo, name: text, widget: text }
-          - label: Metodo
+
+          - label: "06 · Metodo"
             name: method
             widget: object
             collapsed: true
@@ -104,8 +139,15 @@ collections:
               - { label: Testo, name: text, widget: text }
               - { label: Immagine, name: image, widget: image, allow_multiple: false, choose_url: false }
               - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
-              - { label: Posizione orizzontale (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
-              - { label: Posizione verticale (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - label: Adattamento immagine
+                name: imageFit
+                widget: select
+                default: cover
+                options:
+                  - { label: "Ritaglia e riempi il riquadro", value: cover }
+                  - { label: "Mostra l'immagine intera", value: contain }
+              - { label: "Fuoco orizzontale X (%)", name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: "Fuoco verticale Y (%)", name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
               - label: Punti del metodo
                 name: points
                 widget: list
@@ -117,7 +159,8 @@ collections:
                 fields:
                   - { label: Titolo, name: title, widget: string }
                   - { label: Testo, name: text, widget: text }
-          - label: Testi sezione orari
+
+          - label: "07 · Testi degli orari"
             name: scheduleSection
             widget: object
             collapsed: true
@@ -127,7 +170,8 @@ collections:
               - { label: Testo, name: text, widget: text }
               - { label: Etichetta nota, name: noteLabel, widget: string }
               - { label: Testo nota, name: noteText, widget: string }
-          - label: Presentazione insegnanti
+
+          - label: "08 · Presentazione insegnanti"
             name: teachersSection
             widget: object
             collapsed: true
@@ -137,12 +181,20 @@ collections:
               - { label: Testo, name: text, widget: text }
               - { label: Foto di gruppo, name: groupImage, widget: image, allow_multiple: false, choose_url: false }
               - { label: Testo alternativo foto di gruppo, name: groupImageAlt, widget: string, required: false }
-              - { label: Posizione orizzontale foto (%), name: groupImagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
-              - { label: Posizione verticale foto (%), name: groupImagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 42 }
+              - label: Adattamento foto di gruppo
+                name: groupImageFit
+                widget: select
+                default: cover
+                options:
+                  - { label: "Ritaglia e riempi il riquadro", value: cover }
+                  - { label: "Mostra l'immagine intera", value: contain }
+              - { label: "Fuoco orizzontale X (%)", name: groupImagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: "Fuoco verticale Y (%)", name: groupImagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 42 }
               - { label: Etichetta riquadro, name: storyEyebrow, widget: string }
               - { label: Titolo riquadro, name: storyTitle, widget: string }
               - { label: Testo riquadro, name: storyText, widget: text }
-          - label: Invito alla lezione di prova
+
+          - label: "09 · Invito alla lezione di prova"
             name: cta
             widget: object
             collapsed: true
@@ -152,20 +204,26 @@ collections:
               - { label: Testo, name: text, widget: text }
               - { label: Testo pulsante, name: buttonLabel, widget: string }
               - { label: Immagine di sfondo, name: backgroundImage, widget: image, allow_multiple: false, choose_url: false }
-              - { label: Posizione orizzontale sfondo (%), name: backgroundPositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
-              - { label: Posizione verticale sfondo (%), name: backgroundPositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
-          - label: Newsletter
+              - { label: "Fuoco orizzontale X (%)", name: backgroundPositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: "Fuoco verticale Y (%)", name: backgroundPositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+
+          - label: "10 · Newsletter"
             name: newsletter
             widget: object
             collapsed: true
+            hint: "Per raccogliere davvero le iscrizioni devi inserire l'endpoint HTTPS fornito dalla piattaforma newsletter e completare l'informativa privacy."
             fields:
               - { label: Etichetta, name: eyebrow, widget: string }
               - { label: Titolo, name: title, widget: string }
               - { label: Testo, name: text, widget: text }
               - { label: Segnaposto email, name: emailPlaceholder, widget: string }
               - { label: Testo pulsante, name: buttonLabel, widget: string }
+              - { label: Endpoint HTTPS del modulo, name: formAction, widget: string, required: false, hint: "URL di destinazione comunicato dal fornitore newsletter. Non inserire credenziali o chiavi segrete." }
+              - { label: Testo del consenso, name: consentLabel, widget: text }
+              - { label: Testo link privacy, name: privacyLinkLabel, widget: string }
               - { label: Nota tecnica, name: technicalNote, widget: text }
-          - label: Contatti e social
+
+          - label: "11 · Contatti, Maps e social"
             name: contact
             widget: object
             collapsed: true
@@ -175,27 +233,32 @@ collections:
               - { label: Testo, name: text, widget: text }
               - { label: Etichetta indirizzo, name: addressLabel, widget: string }
               - { label: Indirizzo, name: address, widget: text }
+              - { label: Link Google Maps, name: mapsUrl, widget: string, hint: "Deve iniziare con https://" }
               - { label: Etichetta telefono, name: phoneLabel, widget: string }
-              - { label: Telefono, name: phone, widget: string }
+              - { label: Telefono, name: phone, widget: string, hint: "Il link per chiamare viene creato automaticamente." }
               - { label: Etichetta email, name: emailLabel, widget: string }
               - { label: Email, name: email, widget: string, required: false }
               - { label: Etichetta social, name: socialLabel, widget: string }
-              - label: Profili social
+              - label: "I 3 profili social del footer"
                 name: socials
                 widget: list
-                required: false
-                allow_add: true
-                allow_remove: true
+                min: 3
+                max: 3
+                allow_add: false
+                allow_remove: false
                 allow_reorder: true
                 collapsed: true
                 summary: "{{fields.label}}"
+                hint: "Inserisci l'URL per rendere cliccabile il profilo. Se è vuoto resta un placeholder; disattiva Visibile per nasconderlo."
                 fields:
+                  - { label: Visibile, name: published, widget: boolean, default: true }
                   - { label: Nome, name: label, widget: string }
-                  - { label: URL, name: url, widget: string }
+                  - { label: URL del profilo, name: url, widget: string, required: false }
               - label: Modulo contatti
                 name: form
                 widget: object
                 collapsed: true
+                hint: "Inserisci un endpoint HTTPS per consegnare i messaggi a un servizio scelto e contrattualizzato."
                 fields:
                   - { label: Segnaposto nome, name: namePlaceholder, widget: string }
                   - { label: Segnaposto email, name: emailPlaceholder, widget: string }
@@ -203,15 +266,41 @@ collections:
                   - { label: Segnaposto telefono, name: phonePlaceholder, widget: string }
                   - { label: Segnaposto messaggio, name: messagePlaceholder, widget: string }
                   - { label: Testo pulsante, name: buttonLabel, widget: string }
-          - label: Footer
+                  - { label: Endpoint HTTPS del modulo, name: formAction, widget: string, required: false, hint: "Non inserire credenziali o chiavi segrete." }
+                  - { label: Presa visione privacy, name: privacyAcknowledgement, widget: text }
+                  - { label: Testo link privacy, name: privacyLinkLabel, widget: string }
+
+          - label: "12 · Footer"
             name: footer
             widget: object
             collapsed: true
             fields:
               - { label: Nome, name: name, widget: string }
               - { label: Sottotitolo, name: tagline, widget: string }
+              - { label: Titolo social, name: socialTitle, widget: string }
 
-      - label: Corsi e orari
+          - label: "13 · Dati obbligatori per la privacy"
+            name: privacy
+            widget: object
+            collapsed: true
+            hint: "Tutti i campi DA COMPLETARE devono essere verificati con il titolare e con i fornitori prima della pubblicazione."
+            fields:
+              - { label: Data ultimo aggiornamento, name: lastUpdated, widget: string }
+              - { label: Denominazione legale del titolare, name: controllerName, widget: string }
+              - { label: Indirizzo del titolare, name: controllerAddress, widget: string }
+              - { label: Email privacy del titolare, name: controllerEmail, widget: string }
+              - { label: Codice fiscale o partita IVA, name: legalDetails, widget: string }
+              - { label: Hosting e Paese, name: websiteHost, widget: text }
+              - { label: Fornitore newsletter e trasferimenti, name: newsletterProvider, widget: text }
+              - { label: Conservazione newsletter, name: newsletterRetention, widget: text }
+              - { label: Conservazione richieste contatto, name: contactRetention, widget: text }
+              - { label: Altri destinatari, name: additionalRecipients, widget: text }
+              - { label: Autorità di controllo, name: complaintAuthority, widget: string }
+
+  - name: courses_content
+    label: "02 · Corsi e orari"
+    files:
+      - label: "Gestisci corsi e slot orari"
         name: courses
         file: content/courses.json
         format: json
@@ -224,6 +313,8 @@ collections:
             allow_reorder: true
             collapsed: true
             summary: "{{fields.title}}"
+            label_singular: corso
+            hint: "Trascina le schede per ordinarle. Lo stesso ordine viene usato sia nei corsi sia negli orari."
             fields:
               - { label: Identificativo, name: id, widget: string, pattern: ['^[a-z0-9-]+$', 'Usa solo lettere minuscole, numeri e trattini'] }
               - { label: Visibile sul sito, name: published, widget: boolean, default: true }
@@ -233,8 +324,15 @@ collections:
               - { label: Descrizione, name: description, widget: text }
               - { label: Immagine, name: image, widget: image, allow_multiple: false, choose_url: false }
               - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
-              - { label: Posizione orizzontale nel ritaglio (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
-              - { label: Posizione verticale nel ritaglio (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - label: Adattamento immagine
+                name: imageFit
+                widget: select
+                default: cover
+                options:
+                  - { label: "Ritaglia e riempi il riquadro", value: cover }
+                  - { label: "Mostra l'immagine intera", value: contain }
+              - { label: "Fuoco orizzontale X (%)", name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50, hint: "0 = sinistra · 50 = centro · 100 = destra" }
+              - { label: "Fuoco verticale Y (%)", name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50, hint: "0 = alto · 50 = centro · 100 = basso" }
               - label: Punti del corso
                 name: features
                 widget: list
@@ -249,11 +347,15 @@ collections:
                 allow_reorder: true
                 collapsed: true
                 summary: "{{fields.day}} · {{fields.time}}"
+                label_singular: slot orario
                 fields:
                   - { label: Giorno, name: day, widget: string }
                   - { label: Orario, name: time, widget: string, hint: "Esempio: 17:00 – 18:30" }
 
-      - label: Insegnanti e socie
+  - name: teachers_content
+    label: "03 · Insegnanti e socie"
+    files:
+      - label: "Gestisci insegnanti e socie"
         name: teachers
         file: content/teachers.json
         format: json
@@ -265,7 +367,9 @@ collections:
             allow_remove: true
             allow_reorder: true
             collapsed: true
-            summary: "{{fields.name}}"
+            summary: "{{fields.name}} · {{fields.role}}"
+            label_singular: insegnante
+            hint: "Trascina le schede per cambiare l'ordine nel sito."
             fields:
               - { label: Identificativo, name: id, widget: string, pattern: ['^[a-z0-9-]+$', 'Usa solo lettere minuscole, numeri e trattini'] }
               - { label: Visibile sul sito, name: published, widget: boolean, default: true }
@@ -274,10 +378,20 @@ collections:
               - { label: Ruolo, name: role, widget: string }
               - { label: Foto, name: image, widget: image, allow_multiple: false, choose_url: false }
               - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
-              - { label: Posizione orizzontale nel ritaglio (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
-              - { label: Posizione verticale nel ritaglio (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 0 }
+              - label: Adattamento foto
+                name: imageFit
+                widget: select
+                default: cover
+                options:
+                  - { label: "Ritaglia e riempi il riquadro", value: cover }
+                  - { label: "Mostra la foto intera", value: contain }
+              - { label: "Fuoco orizzontale X (%)", name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: "Fuoco verticale Y (%)", name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 0, hint: "Per i ritratti prova 0–20 per dare priorità al volto." }
 
-      - label: Galleria
+  - name: gallery_content
+    label: "04 · Galleria"
+    files:
+      - label: "Gestisci immagini galleria"
         name: gallery
         file: content/gallery.json
         format: json
@@ -290,6 +404,8 @@ collections:
             allow_reorder: true
             collapsed: true
             summary: "{{fields.caption}}"
+            label_singular: immagine
+            hint: "Trascina le immagini per ordinarle. Disattiva Visibile per conservarne una senza mostrarla nel sito."
             fields:
               - { label: Identificativo, name: id, widget: string, pattern: ['^[a-z0-9-]+$', 'Usa solo lettere minuscole, numeri e trattini'] }
               - { label: Visibile sul sito, name: published, widget: boolean, default: true }
@@ -297,5 +413,12 @@ collections:
               - { label: Immagine, name: image, widget: image, allow_multiple: false, choose_url: false }
               - { label: Testo alternativo, name: imageAlt, widget: string, required: false }
               - { label: Didascalia, name: caption, widget: string, required: false }
-              - { label: Posizione orizzontale nel ritaglio (%), name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
-              - { label: Posizione verticale nel ritaglio (%), name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - label: Adattamento immagine
+                name: imageFit
+                widget: select
+                default: cover
+                options:
+                  - { label: "Ritaglia e riempi il riquadro", value: cover }
+                  - { label: "Mostra l'immagine intera", value: contain }
+              - { label: "Fuoco orizzontale X (%)", name: imagePositionX, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
+              - { label: "Fuoco verticale Y (%)", name: imagePositionY, widget: number, value_type: int, min: 0, max: 100, step: 1, default: 50 }
