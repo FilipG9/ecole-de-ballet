@@ -341,7 +341,62 @@
       overflow-x:auto;
       overflow-y:hidden;
       scroll-snap-type:x proximity;
-      scrollbar-width:thin;
+      scrollbar-width:none;
+      -ms-overflow-style:none;
+    }
+    .course-grid::-webkit-scrollbar{display:none}
+    .course-carousel-controls{
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      gap:10px;
+      margin-bottom:16px;
+    }
+    .course-carousel-controls[hidden]{display:none}
+    .course-carousel-hint{
+      margin-right:4px;
+      color:rgba(67,55,66,.62);
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .course-arrow{
+      width:48px;
+      height:48px;
+      display:inline-grid;
+      place-items:center;
+      border:1px solid rgba(79,14,130,.18);
+      border-radius:50%;
+      background:rgba(255,255,255,.88);
+      color:var(--plum);
+      box-shadow:0 12px 32px rgba(67,55,66,.10);
+      cursor:pointer;
+      transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease, opacity .25s ease;
+    }
+    .course-arrow svg{
+      width:20px;
+      height:20px;
+      fill:none;
+      stroke:currentColor;
+      stroke-width:1.8;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+    .course-arrow:not(:disabled):hover{
+      transform:translateY(-2px);
+      border-color:var(--plum);
+      background:var(--plum);
+      color:#fff;
+    }
+    .course-arrow:focus-visible{
+      outline:3px solid rgba(134,92,161,.24);
+      outline-offset:3px;
+    }
+    .course-arrow:disabled{
+      opacity:.28;
+      cursor:default;
+      box-shadow:none;
     }
     .course-card{
       height:520px;
@@ -1066,6 +1121,9 @@
       .actions{flex-direction:column}
       .btn{width:100%}
       .course-grid{grid-auto-columns:100%}
+      .course-carousel-controls{justify-content:space-between}
+      .course-carousel-hint{margin-right:auto}
+      .course-arrow{width:44px;height:44px}
       .schedule-grid,
       .team-grid{grid-template-columns:1fr}
       .course-card{height:500px}
@@ -1164,7 +1222,20 @@
           <p class="lead">Dalla propedeutica alla formazione tecnica, dai corsi adulti al dance workout: ogni proposta nasce per rispettare il corpo e valorizzare il movimento.</p>
         </div>
 
-        <div class="course-grid">
+        <div class="course-carousel-controls" data-course-controls hidden>
+          <span class="course-carousel-hint">Scorri i corsi</span>
+          <button class="course-arrow" type="button" data-course-previous aria-label="Mostra i corsi precedenti" aria-controls="course-grid">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 5l-7 7 7 7"></path>
+            </svg>
+          </button>
+          <button class="course-arrow" type="button" data-course-next aria-label="Mostra altri corsi" aria-controls="course-grid">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="course-grid" id="course-grid" tabindex="0" aria-label="Corsi disponibili">
           <article class="course-card wide" data-content-id="propedeutica">
             <img src="assets/course-propedeutica.png" alt="Danzatrice vista dall'alto in sala luminosa">
             <div class="course-copy">
@@ -1516,10 +1587,62 @@
       }
     }
 
-    if (document.documentElement.dataset.cmsReady === "true") {
+    function initializeCourseCarousel() {
+      const grid = document.querySelector(".course-grid");
+      const controls = document.querySelector("[data-course-controls]");
+      const previousButton = document.querySelector("[data-course-previous]");
+      const nextButton = document.querySelector("[data-course-next]");
+
+      if (!grid || !controls || !previousButton || !nextButton || grid.dataset.carouselReady === "true") {
+        return;
+      }
+
+      grid.dataset.carouselReady = "true";
+
+      const updateControls = () => {
+        const maximumScroll = Math.max(0, grid.scrollWidth - grid.clientWidth);
+        const hasOverflow = maximumScroll > 2;
+        controls.hidden = !hasOverflow;
+        previousButton.disabled = grid.scrollLeft <= 2;
+        nextButton.disabled = grid.scrollLeft >= maximumScroll - 2;
+      };
+
+      const moveByOneCard = (direction) => {
+        const card = grid.querySelector(".course-card");
+        if (!card) {
+          return;
+        }
+        const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
+        const distance = card.getBoundingClientRect().width + gap;
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        grid.scrollBy({
+          left: direction * distance,
+          behavior: reducedMotion ? "auto" : "smooth"
+        });
+      };
+
+      previousButton.addEventListener("click", () => moveByOneCard(-1));
+      nextButton.addEventListener("click", () => moveByOneCard(1));
+      grid.addEventListener("scroll", updateControls, { passive: true });
+
+      if ("ResizeObserver" in window) {
+        new ResizeObserver(updateControls).observe(grid);
+      } else {
+        window.addEventListener("resize", updateControls);
+      }
+
+      updateControls();
+    }
+
+    function initializePageEnhancements() {
       initializeRevealAnimations();
+      initializeCourseCarousel();
+    }
+
+    if (document.documentElement.dataset.cmsReady === "true") {
+      initializePageEnhancements();
     } else {
-      document.addEventListener("cms:content-ready", initializeRevealAnimations, { once: true });
+      document.addEventListener("cms:content-ready", initializePageEnhancements, { once: true });
     }
   </script>
 </body>
