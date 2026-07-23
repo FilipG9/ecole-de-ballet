@@ -10,12 +10,8 @@
       "imageFit": "cover",
       "schedule": [
         {
-          "day": "Lunedì",
-          "time": "16:30 – 17:30"
-        },
-        {
-          "day": "Mercoledì",
-          "time": "16:30 – 17:30"
+          "day": "Giovedì",
+          "time": "16:15– 17:00"
         }
       ],
       "title": "Propedeutica",
@@ -38,18 +34,18 @@
       "imageFit": "cover",
       "schedule": [
         {
-          "day": "Martedì",
-          "time": "17:00 – 18:30"
+          "day": "Lunedì",
+          "time": "17:00 – 18:00"
         },
         {
           "day": "Giovedì",
-          "time": "17:00 – 18:30"
+          "time": "17:00 – 18:00"
         }
       ],
-      "title": "Danza Classica",
-      "id": "danza-classica",
+      "title": "Danza Classica Moderna Primo Livello",
+      "id": "danza-classica-moderna-primo-livello",
       "image": "assets/course-classica.png",
-      "description": "La base tecnica imprescindibile: rigore, eleganza e profonda espressione artistica.",
+      "description": "Dalla grazia del classico al ritmo del modern: sviluppa tecnica, postura e creatività imparando a esprimerti.",
       "features": [
         "Lavoro alla sbarra e al centro",
         "Allineamento, flessibilità e controllo",
@@ -66,22 +62,50 @@
       "imageFit": "cover",
       "schedule": [
         {
-          "day": "Lunedì",
-          "time": "18:00 – 19:15"
+          "day": "Martedì",
+          "time": "19:30 – 20:30"
         },
         {
-          "day": "Mercoledì",
-          "time": "18:00 – 19:15"
+          "day": "Giovedì",
+          "time": "18:00 – 19:30"
         }
       ],
-      "title": "Modern",
-      "id": "modern",
+      "title": "Modern Avanzato",
+      "id": "modern-avanzato",
       "image": "assets/course-modern.png",
       "description": "Energia, dinamismo e libertà espressiva, con lavoro sul respiro, sul peso e sullo spazio.",
       "features": [
         "Floorwork e radicamento",
         "Dinamiche e cambi di direzione",
         "Linguaggio corporeo personale"
+      ]
+    },
+    {
+      "published": true,
+      "imageAlt": "Danzatrice classica in abito bianco",
+      "order": 0,
+      "wide": false,
+      "imagePositionX": 50,
+      "imagePositionY": 50,
+      "imageFit": "cover",
+      "schedule": [
+        {
+          "day": "Lunedì",
+          "time": "18:15 - 19:15"
+        },
+        {
+          "day": "Mercoledì",
+          "time": "18:00 - 19:30"
+        }
+      ],
+      "title": "Classica Avanzato",
+      "id": "classica-avanzato",
+      "image": "/images/uploads/chatgpt-image-14-lug-2026-23_57_57-1-.png",
+      "description": "Punte, virtuosismo e disciplina: il perfezionamento della danza classica al massimo livello.",
+      "features": [
+        "Padronanza della tecnica",
+        "Repertorio accademico",
+        "Studio dell'interpretazione "
       ]
     },
     {
@@ -95,11 +119,11 @@
       "schedule": [
         {
           "day": "Martedì",
-          "time": "20:00 – 21:15"
+          "time": "19:30– 20:30"
         },
         {
           "day": "Giovedì",
-          "time": "20:00 – 21:15"
+          "time": "19:30– 20:30"
         }
       ],
       "title": "Danza Adulti",
@@ -122,12 +146,8 @@
       "imageFit": "cover",
       "schedule": [
         {
-          "day": "Mercoledì",
-          "time": "19:30 – 20:30"
-        },
-        {
-          "day": "Venerdì",
-          "time": "19:30 – 20:30"
+          "day": "Giovedì",
+          "time": "19:30 – 20:15"
         }
       ],
       "title": "Dance Workout",
