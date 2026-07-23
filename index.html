@@ -333,9 +333,15 @@
     }
     .course-grid{
       display:grid;
-      grid-template-columns:repeat(5,1fr);
+      grid-template-columns:none;
+      grid-auto-flow:column;
+      grid-auto-columns:calc((100% - 56px) / 5);
       gap:14px;
       align-items:stretch;
+      overflow-x:auto;
+      overflow-y:hidden;
+      scroll-snap-type:x proximity;
+      scrollbar-width:thin;
     }
     .course-card{
       height:520px;
@@ -348,6 +354,7 @@
       isolation:isolate;
       box-shadow:0 18px 52px rgba(67,55,66,.12);
       transition:transform .35s ease, box-shadow .35s ease;
+      scroll-snap-align:start;
     }
     .course-card.wide{grid-column:auto}
     .course-card img{
@@ -1013,7 +1020,7 @@
     }
 
     @media(max-width:1080px){
-      .course-grid{grid-template-columns:repeat(2,1fr)}
+      .course-grid{grid-auto-columns:calc((100% - 14px) / 2)}
       .course-card.wide{grid-column:span 1}
       .schedule-grid{grid-template-columns:repeat(2,1fr)}
       .team-grid{grid-template-columns:repeat(3,1fr)}
@@ -1058,7 +1065,7 @@
       .hero-panel{padding:20px}
       .actions{flex-direction:column}
       .btn{width:100%}
-      .course-grid,
+      .course-grid{grid-auto-columns:100%}
       .schedule-grid,
       .team-grid{grid-template-columns:1fr}
       .course-card{height:500px}
