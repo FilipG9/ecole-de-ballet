@@ -168,7 +168,7 @@
     "privacyLinkLabel": "Leggi l'informativa privacy",
     "emailPlaceholder": "La tua email",
     "title": "Resta nel ritmo dello studio.",
-    "formAction": "<button class=\"ml-onclick-form\" onclick=\"ml('show', 'abAlKg', true)\">Click here to show form</button>",
+    "formAction": "https://preview.mailerlite.io/forms/2574701/195727827915507542/share",
     "consentLabel": "Acconsento a ricevere via email la newsletter di Artemisia Studio Danza. Posso revocare il consenso in qualsiasi momento."
   },
   "hero": {
