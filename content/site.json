@@ -94,7 +94,7 @@
     "newsletterRetention": "Fino alla revoca del consenso o alla disiscrizione, salvo il tempo strettamente necessario a documentare la revoca.",
     "controllerName": "Artemisia ASD",
     "legalDetails": "04269590362",
-    "newsletterProvider": "DA COMPLETARE: piattaforma newsletter, sede e garanzie per eventuali trasferimenti extra UE",
+    "newsletterProvider": "Brevo. Fornitore con sede in Francia. I dati sono archiviati su server situati nell’Unione Europea (Francia, Germania e Belgio). Per il trattamento dei dati Brevo prevede accordi di nomina/contrattuali con i propri responsabili del trattamento (DPA).",
     "controllerAddress": "Via Luigi Galvani, 32-36, 41012 Carpi (MO)",
     "complaintAuthority": "Garante per la protezione dei dati personali",
     "contactRetention": "Per il tempo necessario a rispondere e gestire la richiesta; definire nel registro dei trattamenti un termine massimo coerente."
@@ -168,7 +168,7 @@
     "privacyLinkLabel": "Leggi l'informativa privacy",
     "emailPlaceholder": "La tua email",
     "title": "Resta nel ritmo dello studio.",
-    "formAction": "",
+    "formAction": "https://api.brevo.com/v3/contacts",
     "consentLabel": "Acconsento a ricevere via email la newsletter di Artemisia Studio Danza. Posso revocare il consenso in qualsiasi momento."
   },
   "hero": {
