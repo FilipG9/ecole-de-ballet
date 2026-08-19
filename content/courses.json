@@ -11,7 +11,7 @@
       "schedule": [
         {
           "day": "Giovedì",
-          "time": "16:15– 17:00"
+          "time": "16:30 – 17:15"
         }
       ],
       "title": "Propedeutica",
@@ -35,11 +35,11 @@
       "schedule": [
         {
           "day": "Lunedì",
-          "time": "17:00 – 18:00"
+          "time": "17:30 – 18:30"
         },
         {
           "day": "Giovedì",
-          "time": "17:00 – 18:00"
+          "time": "17:30 – 18:30"
         }
       ],
       "title": "Danza Classica Moderna Primo Livello",
@@ -67,7 +67,7 @@
         },
         {
           "day": "Giovedì",
-          "time": "18:00 – 19:30"
+          "time": "18:30 – 20:00"
         }
       ],
       "title": "Modern Avanzato",
@@ -91,7 +91,7 @@
       "schedule": [
         {
           "day": "Lunedì",
-          "time": "18:15 - 19:15"
+          "time": "18:30 - 19:30"
         },
         {
           "day": "Mercoledì",
@@ -118,11 +118,11 @@
       "imageFit": "cover",
       "schedule": [
         {
-          "day": "Martedì",
+          "day": "Lunedì",
           "time": "19:30– 20:30"
         },
         {
-          "day": "Giovedì",
+          "day": "Mercoledì",
           "time": "19:30– 20:30"
         }
       ],
