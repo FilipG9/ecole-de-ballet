@@ -10,7 +10,7 @@
       "privacyAcknowledgement": "Dichiaro di aver letto l'informativa privacy sul trattamento dei dati inviati con questo modulo.",
       "emailPlaceholder": "Email",
       "coursePlaceholder": "Corso di interesse",
-      "formAction": "artemisia.asd.5@gmail.com"
+      "formAction": ""
     },
     "phoneLabel": "Telefono",
     "socials": [
@@ -161,6 +161,7 @@
     "image": "assets/artemisia-logo.jpg"
   },
   "newsletter": {
+    "published": false,
     "buttonLabel": "Iscriviti",
     "eyebrow": "Newsletter",
     "text": "Ricevi aggiornamenti su corsi, lezioni prova, open day, laboratori e appuntamenti speciali di Artemisia Studio Danza.",

@@ -384,7 +384,7 @@
 
   function safeWebUrl(value) {
     var text = nonEmptyString(value);
-    if (!text) {
+    if (!text || !/^https?:\/\//i.test(text)) {
       return null;
     }
     try {
@@ -412,6 +412,11 @@
     var action = safeWebUrl(endpoint);
     if (action) {
       form.action = action;
+      form.method = "post";
+      return;
+    }
+    var hostHandled = form.hasAttribute("data-netlify") || form.querySelector('input[name="form-name"]');
+    if (hostHandled) {
       form.method = "post";
       return;
     }
@@ -569,6 +574,10 @@
     }
 
     if (site.newsletter) {
+      var newsletterSection = document.querySelector(".newsletter");
+      if (newsletterSection) {
+        newsletterSection.hidden = site.newsletter.published === false;
+      }
       setText(".newsletter .eyebrow", site.newsletter.eyebrow);
       setText(".newsletter h2", site.newsletter.title);
       setText(".newsletter p", site.newsletter.text);

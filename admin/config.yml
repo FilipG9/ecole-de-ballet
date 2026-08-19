@@ -213,6 +213,7 @@ collections:
             collapsed: true
             hint: "Per raccogliere davvero le iscrizioni devi inserire l'endpoint HTTPS fornito dalla piattaforma newsletter e completare l'informativa privacy."
             fields:
+              - { label: Visibile sul sito, name: published, widget: boolean, default: false, hint: "Disattiva per nascondere completamente la newsletter dalla home." }
               - { label: Etichetta, name: eyebrow, widget: string }
               - { label: Titolo, name: title, widget: string }
               - { label: Testo, name: text, widget: text }
@@ -266,7 +267,7 @@ collections:
                   - { label: Segnaposto telefono, name: phonePlaceholder, widget: string }
                   - { label: Segnaposto messaggio, name: messagePlaceholder, widget: string }
                   - { label: Testo pulsante, name: buttonLabel, widget: string }
-                  - { label: Endpoint HTTPS del modulo, name: formAction, widget: string, required: false, hint: "Non inserire credenziali o chiavi segrete." }
+                  - { label: Endpoint esterno opzionale, name: formAction, widget: string, required: false, hint: "Lascia vuoto: il modulo è già collegato a Netlify Forms. Inserisci solo un URL HTTPS completo se in futuro userai un altro servizio; un indirizzo email non è un endpoint." }
                   - { label: Presa visione privacy, name: privacyAcknowledgement, widget: text }
                   - { label: Testo link privacy, name: privacyLinkLabel, widget: string }
 
