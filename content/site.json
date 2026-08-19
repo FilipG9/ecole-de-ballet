@@ -64,13 +64,13 @@
       }
     ],
     "eyebrow": "Metodo",
-    "text": "Ogni corso lavora su corpo, ritmo e spazio. La tecnica serve a costruire sicurezza; la creatività permette a ogni allievo di trovare presenza, intenzione e qualità nel movimento.",
+    "text": "Ogni corso lavora sul corpo, il ritmo espressività e tecnica.",
     "imageAlt": "Danzatrice in movimento in sala prove",
     "imagePositionX": 50,
     "imagePositionY": 50,
     "imageFit": "cover",
-    "title": "Il gesto non è solo un passo: è ascolto.",
-    "image": "assets/course-adulti.png"
+    "title": "La nostra scuola.",
+    "image": "/images/uploads/img_0105.jpg"
   },
   "meta": {
     "title": "Artemisia Studio Danza | Carpi",
@@ -113,7 +113,7 @@
   },
   "cta": {
     "eyebrow": "Lezione prova",
-    "title": "Trova il corso più adatto al tuo modo di muoverti.",
+    "title": "Trova il corso più adatto a te.",
     "text": "Scrivici indicando età, esperienza e corso di interesse. Ti aiuteremo a scegliere il percorso più coerente con il tuo punto di partenza.",
     "buttonLabel": "Contattaci",
     "backgroundImage": "assets/course-classica.png",
@@ -121,10 +121,10 @@
     "backgroundPositionY": 50
   },
   "teachersSection": {
-    "storyText": "L'esperienza diretta sul palcoscenico sostiene una didattica capace di unire precisione accademica, sensibilità artistica e linguaggi contemporanei.",
+    "storyText": "L'esperienza diretta sul palcoscenico sostiene una didattica capace di unire tecnica accademica, senso artistico e linguaggio contemporanei.",
     "storyTitle": "Cinque percorsi, una sola visione.",
     "eyebrow": "Socie",
-    "text": "Cinque socie fondatrici e docenti, unite da oltre vent'anni di carriera artistica e di palcoscenico, guidano una formazione solida, attenta e accogliente.",
+    "text": "Cinque socie fondatrici e docenti, unite da oltre vent'anni di carriera artistica e di palcoscenico, guidano una formazione solida e accogliente.",
     "groupImageAlt": "Le cinque socie fondatrici di Artemisia Studio Danza insieme",
     "groupImagePositionX": 50,
     "storyEyebrow": "Un progetto condiviso",
@@ -137,7 +137,7 @@
     "values": [
       {
         "title": "Tecnica",
-        "text": "Studio del corpo, allineamento, controllo e progressione."
+        "text": "Studio della tecnica della danza classica e moderna."
       },
       {
         "title": "Ritmo",
@@ -149,7 +149,7 @@
       }
     ],
     "paragraphs": [
-      "Artemisia Studio Danza nasce come punto di riferimento per chi desidera scoprire, vivere e approfondire la magia del movimento. Il rigore e l'eleganza del balletto classico incontrano l'energia e la libertà espressiva della danza moderna.",
+      "Artemisia Studio Danza nasce come punto di riferimento per chi desidera scoprire, vivere e approfondire la magia del movimento a due passi dal centro storico. Il rigore e l'eleganza del balletto classico incontrano l'energia e la libertà espressiva della danza moderna.",
       "Ogni allievo è accompagnato in un percorso di crescita tecnica, artistica e personale, dai primi passi dei più piccoli fino alle lezioni per adulti. Per coltivare una passione non esistono limiti di tempo: non è mai troppo tardi per iniziare a ballare."
     ],
     "eyebrow": "Lo studio",
@@ -161,10 +161,10 @@
     "image": "assets/artemisia-logo.jpg"
   },
   "newsletter": {
-    "published": false,
     "buttonLabel": "Iscriviti",
     "eyebrow": "Newsletter",
     "text": "Ricevi aggiornamenti su corsi, lezioni prova, open day, laboratori e appuntamenti speciali di Artemisia Studio Danza.",
+    "published": false,
     "technicalNote": "Il servizio newsletter non è ancora collegato. Configura l'endpoint nel pannello prima della pubblicazione.",
     "privacyLinkLabel": "Leggi l'informativa privacy",
     "emailPlaceholder": "La tua email",
@@ -175,12 +175,12 @@
   "hero": {
     "primaryButtonLabel": "Scopri i corsi",
     "eyebrow": "Artemisia Studio Danza",
-    "text": "Un ambiente curato, creativo e sicuro dove bambini, ragazzi e adulti incontrano la danza attraverso tecnica, ascolto, ritmo ed espressione personale.",
+    "text": "Un ambiente curato, creativo dove bambini, ragazzi e adulti incontrano la danza attraverso tecnica, ascolto, ritmo ed espressione personale.",
     "secondaryButtonLabel": "Prenota una prova",
     "imageAlt": "Danzatrice in abito bianco in una sala luminosa",
-    "panelText": "La sala diventa uno spazio di crescita: postura, musicalità, disciplina e libertà espressiva lavorano insieme.",
+    "panelText": "Un unico ambiente dove disciplina e libertà espressiva lavorano insieme.",
     "imagePositionX": 50,
-    "panelTitle": "Metodo, energia, presenza.",
+    "panelTitle": "Nuova apertura a Carpi 14 settembre 2026.",
     "imagePositionY": 50,
     "imageFit": "cover",
     "title": "Il movimento prende forma.",
