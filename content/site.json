@@ -60,11 +60,11 @@
       },
       {
         "title": "Progressione",
-        "text": "Ogni percorso cresce con intensità graduale, varianti accessibili e obiettivi concreti."
+        "text": "Ogni percorso cresce con intensità graduale."
       }
     ],
     "eyebrow": "Metodo",
-    "text": "Ogni corso lavora sul corpo, il ritmo espressività e tecnica.",
+    "text": "Ogni corso lavora sul corpo, il ritmo, espressività e tecnica.",
     "imageAlt": "Danzatrice in movimento in sala prove",
     "imagePositionX": 50,
     "imagePositionY": 50,
@@ -177,14 +177,14 @@
     "eyebrow": "Artemisia Studio Danza",
     "text": "Un ambiente curato, creativo dove bambini, ragazzi e adulti incontrano la danza attraverso tecnica, ascolto, ritmo ed espressione personale.",
     "secondaryButtonLabel": "Prenota una prova",
-    "imageAlt": "Danzatrice in abito bianco in una sala luminosa",
+    "imageAlt": "Danzatrici in abito bianco sul palcoscenico.",
     "panelText": "Un unico ambiente dove disciplina e libertà espressiva lavorano insieme.",
     "imagePositionX": 50,
     "panelTitle": "Nuova apertura a Carpi 14 settembre 2026.",
     "imagePositionY": 50,
     "imageFit": "cover",
     "title": "Il movimento prende forma.",
-    "image": "assets/artemisia-hero.png"
+    "image": "/images/uploads/img_0772.jpg"
   },
   "footer": {
     "name": "Artemisia Studio Danza",
