@@ -159,6 +159,34 @@
         "Cardio e tonificazione graduali",
         "Energia, ritmo e leggerezza"
       ]
+    },
+    {
+      "published": true,
+      "imageAlt": "Donna che esegue pose di pilates",
+      "order": 0,
+      "wide": false,
+      "imagePositionX": 50,
+      "imagePositionY": 50,
+      "imageFit": "cover",
+      "schedule": [
+        {
+          "day": "Lunedì",
+          "time": "8:30 - 9:30"
+        },
+        {
+          "day": "Mercoledì",
+          "time": "8:30 - 9:30"
+        }
+      ],
+      "title": "Pilates Matwork",
+      "id": "pilates-matwork",
+      "image": "/images/uploads/gemini_generated_image_16prmz16prmz16pr.jpg",
+      "description": "Un percorso pensato per riattivare il corpo, eliminare le tensioni e migliorare l'equilibrio",
+      "features": [
+        "Riduzione dello stress",
+        "Controllo dei gesti",
+        "Riattivazione corporale"
+      ]
     }
   ]
 }
