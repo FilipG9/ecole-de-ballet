@@ -4,6 +4,7 @@ backend:
   name: github
   repo: FilipG9/ecole-de-ballet
   branch: main
+  auth_scope: public_repo
 
 locale: it
 publish_mode: simple
